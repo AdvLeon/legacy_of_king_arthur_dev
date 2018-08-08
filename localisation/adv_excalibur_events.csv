@@ -87,9 +87,9 @@ exc.o.a.601;A mesmerising display...;;;;;;;;;;;;;x
 
 #### Event 6 - Find the Lady Pt2 ####
 
-exc.t.602;The Lady’s Judgement;;;;;;;;;;;;;x
+exc.t.602;The Lady's Judgement;;;;;;;;;;;;;x
 
-exc.d.602;At it+s crescendo the music stops as suddenly as it started. The mist parting to reveal her, the Lady, exactly as the Priest described. She walks slowly towards you, her footfalls not disturbing the stillness of the water. Her flowing white gown and long, golden hair cling to her form. When she speaks, her voice is firm, but kind.
+exc.d.602;At its crescendo the music stops as suddenly as it started. The mist parting to reveal her, the Lady, exactly as the Priest described. She walks slowly towards you, her footfalls not disturbing the stillness of the water. Her flowing white gown and long, golden hair cling to her form. When she speaks, her voice is firm, but kind.
 "You have travelled far and witnessed much [This.GetFirstName], your journey has reached its end. Whether you leave with the reward you desire hinges on my judgement. You will not be able to hide your true self from me. Are you ready to begin?";;;;;;;;;;;;;x
 
 exc.o.a.602;I am ready, do what you must...;;;;;;;;;;;;;x
