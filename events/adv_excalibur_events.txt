@@ -182,10 +182,6 @@ character_event = {
 		hidden_tooltip = { character_event = { id = exc.3 days = 14 } }
 		if = {
 			limit = { ai = no }
-			chronicle = {
-				entry = CHRONICLE_PILGRIMAGE_TO_CANTERBURY
-				picture = GFX_evt_pilgrims_epic_journey
-			}
 		}
 	}
 }
@@ -206,6 +202,10 @@ character_event = {
 			add_trait = on_pilgrimage
 			set_character_flag = good_pilgrimage
 		}
+		chronicle = {
+				entry = exc.c.2
+				picture = GFX_evt_pilgrims_epic_journey
+			}
 		hidden_tooltip = {
 			AND = {
 				character_event = { id = exc.41 days = 10 }			# Danger on road - robbers
