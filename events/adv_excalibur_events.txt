@@ -896,7 +896,7 @@ narrative_event = {
 	title = exc.t.401
 	desc = exc.d.401
 	picture = GFX_evt_pilgrims_epic_journey
-	border = GFX_event_narrative_frame_economy
+	border = GFX_event_narrative_frame_diplomacy
 	
 	is_triggered_only = yes
 
@@ -912,7 +912,7 @@ narrative_event = {
 	title = exc.t.402
 	desc = exc.d.402
 	picture = GFX_evt_mysterious_forest
-	border = GFX_event_narrative_frame_economy
+	border = GFX_event_narrative_frame_diplomacy
 	
 	is_triggered_only = yes
 
@@ -928,7 +928,7 @@ narrative_event = {
 	title = exc.t.403
 	desc = exc.d.403
 	picture = GFX_evt_rider_adventure
-	border = GFX_event_narrative_frame_economy
+	border = GFX_event_narrative_frame_diplomacy
 	
 	is_triggered_only = yes
 
