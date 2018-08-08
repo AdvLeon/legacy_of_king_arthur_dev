@@ -203,7 +203,7 @@ character_event = {
 			set_character_flag = good_pilgrimage
 		}
 		chronicle = {
-				entry = exc.c.2
+				entry = exc.misc.2
 				picture = GFX_evt_pilgrims_epic_journey
 			}
 		hidden_tooltip = {
