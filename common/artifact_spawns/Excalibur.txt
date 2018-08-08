@@ -1,0 +1,17 @@
+Excalibur = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+	}
+    artifacts = {
+        Excalibur = {
+            value = 1
+        }
+    }
+}

@@ -1,0 +1,31 @@
+namespace = Lake
+narrative_event = {
+	id = "Lake.1"
+	desc = "EVTDESCLA.1"
+	title = "EVTTITLE_EX"
+	picture = "GFX_trade_post_republic.dds"
+	
+	is_triggered_only = yes
+
+		option = {
+	name = "EVTOPTLA.1"
+	remove_trait = proud
+	}
+}
+narrative_event = {
+	id = "Lady.1"
+	desc = "EVTDESCLA.2"
+	title = "EVTTITLE_EX"
+	picture = "GFX_idyllic_fishing_wol.dds"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTLA.2"
+		add_artifact = Excalibur
+		set_global_flag = excalibur_found
+		give_claim = e_britannia
+		add_claim = e_britannia
+		}
+	}
+}

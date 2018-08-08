@@ -1,0 +1,1499 @@
+#################################################
+#
+# ADVLEON'S EXCALIBUR EVENTS
+#
+#################################################
+
+namespace = exc
+
+# Message about the Lady of the Lake #
+narrative_event = {
+	id = "exc.1"
+	desc = "exc.d.1"
+	title = "exc.t.1"
+	picture = GFX_evt_ruler_listening_to_supplicant
+	
+	has_dlc = "Mystics"
+	
+	min_age = 16
+	only_playable = yes
+	only_capable = yes
+	only_rulers = yes
+	religion_group = christian
+	prisoner = no
+	culture_group = celtic
+	year = 800
+	ai = no
+	
+	trigger = { 
+		OR = { 
+		primary_title = { title = k_england }
+		primary_title = { title = k_wales }
+		primary_title = { title = e_britannia }
+			}
+		OR = {	
+		trait = kind
+		trait = just
+		trait = brave
+		trait = chaste
+		trait = temperate
+		trait = charitable
+		trait = diligent
+		trait = patient
+		trait = humble
+		trait = honest
+			}
+		AND = {
+		prestige = 2000
+		piety = 1000
+			}
+		OR = {
+			ai = no
+			has_game_rule = {
+				name = supernatural_events
+				value = unrestricted
+			}
+		}
+		NOR = {
+			has_game_rule = {
+				name = supernatural_events
+				value = off
+			}
+			has_global_flag = excalibur_found
+			has_character_flag = excalibur_failed
+			has_character_flag = excalibur_searching
+		}
+		is_inaccessible_trigger = no
+		immortal = no
+	}
+	
+	mean_time_to_happen = {
+		months = 3000
+		modifier = {		#Virtues
+			factor = 0.1
+			trait = brave
+		}
+		modifier = {
+			factor = 0.1
+			trait = chaste
+		}
+		modifier = {
+			factor = 0.1
+			trait = temperate
+		}
+		modifier = {
+			factor = 0.1
+			trait = charitable
+		}
+		modifier = {
+			factor = 0.1
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.1
+			trait = patient
+		}
+		modifier = {
+			factor = 0.1
+			trait = kind
+		}
+		modifier = {
+			factor = 0.1
+			trait = humble
+		}
+		modifier = {
+			factor = 0.1
+			trait = just
+		}
+		modifier = {
+			factor = 0.1
+			trait = honest
+		}
+		modifier = {		#Sins
+			factor = -0.1
+			trait = craven
+		}
+		modifier = {
+			factor = -0.1
+			trait = lustful
+		}
+		modifier = {
+			factor = -0.1
+			trait = gluttonous
+		}
+		modifier = {
+			factor = -0.1
+			trait = greedy
+		}
+		modifier = {
+			factor = -0.1
+			trait = slothful
+		}
+		modifier = {
+			factor = -0.1
+			trait = wroth
+		}
+		modifier = {
+			factor = -0.1
+			trait = envious
+		}
+		modifier = {
+			factor = -0.1
+			trait = proud
+		}
+		modifier = {
+			factor = -0.1
+			trait = arbitrary
+		}
+		modifier = {
+			factor = -0.1
+			trait = deceitful
+		}
+	}
+		option = {
+		name = "exc.o.a.1"
+		hidden_tooltip = {
+			set_character_flag = preparing_pilgrimage
+			clr_character_flag = activated_pilgrimage
+			set_character_flag = excalibur_searching
+			}
+		character_event = { id = exc.2 days = 7 }
+		}
+    option = {
+	name = "exc.o.b.1"
+	set_character_flag = excalibur_failed
+	
+	}
+}
+
+# Preparing for Camelot #
+character_event = {
+	id = exc.2
+	desc = exc.d.2
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.2
+		trigger = {
+			year = 800
+		}
+		ai_chance = { factor = 25 }
+		set_character_flag = pilgrimage_to_camelot
+		hidden_tooltip = { character_event = { id = exc.3 days = 14 } }
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_CANTERBURY
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+}
+
+# Setting out for Camelot (also selects events for road)#
+character_event = {
+	id = exc.3
+	desc = exc.d.3
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = exc.o.a.3
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+		}
+		hidden_tooltip = {
+			AND = {
+				character_event = { id = exc.41 days = 10 }			# Danger on road - robbers
+				#narrative_event = { id = exc.42 days = 20 }		# Trouble on road - inn on fire
+				#character_event = { id = exc.43 days = 30 }		# Danger on road  - broken bridge
+				#character_event = { id = exc.44 days = 40 }		# Philosophical ponderings
+				#character_event = { id = exc.45 days = 50 } 		# Trouble on road - weather
+				#character_event = { id = exc.46 days = 60 }		# Meeting people on travels - good Samaritan
+				#narrative_event = { id = exc.47 days = 70 }		# Meeting people on travels - Noah's ark
+				#character_event = { id = exc.48 days = 80 }		# Meeting people on travels - bread and fish
+				#character_event = { id = exc.49 days = 90 }		# Learning something about boats
+				#character_event = { id = exc.50 days = 100 }		# Learning something about bridges
+				#character_event = { id = exc.51 days = 110 }		# Falls ill from trials on journey
+				#character_event = { id = exc.52 days = 120 }		# Moral choice - steal or give
+				#character_event = { id = exc.53 days = 130 }		# Trouble on road - lost
+				#character_event = { id = exc.54 days = 140 }		# Sees a guiding star - religious experience
+				#character_event = { id = exc.4 days = 160 }		# Arrived at Camelot
+			}
+			if = {
+				limit = {
+						OR = {
+							is_title_active = d_knights_templar
+							is_title_active = d_teutonic_order
+							is_title_active = d_knights_hospitaler
+						}
+				}
+				random_list = {
+					10 = {  narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = {  character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = {  character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+	option = {
+	name = exc.o.b.3
+		hidden_tooltip = {
+			clr_character_flag = pilgrimage_to_camelot
+			clr_character_flag = preparing_pilgrimage
+			clr_character_flag = excalibur_searching
+			set_character_flag = excalibur_failed
+		}
+	}
+}
+
+################ ON THE ROAD EVENTS #################
+
+# Danger on road - robbers #
+character_event = {
+	id = exc.41
+	desc = EVTDESC_SoA_5029
+	picture = GFX_evt_bandits
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5029
+		ai_chance = {
+			factor = 90
+		}
+		wealth = -10
+		narrative_event = { id = exc.42 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5029
+		tooltip_info = martial
+		trigger = {
+			martial = 10
+		}
+		ai_chance = {
+			factor = 10
+		}
+		if = {
+			limit = { NOT = { trait = brave } }
+			add_trait = brave
+		}
+		random = {
+			chance = 10
+			add_trait = wounded
+			hidden_tooltip = {
+				character_event = {
+					id = 38280 #Notify Wounded
+				}
+			narrative_event = { id = exc.42 days = 10 }
+			}
+		}
+	}
+}
+
+# Trouble on road - inn on fire #
+narrative_event = {
+	id = exc.42
+	title = EVTNAME_SoA_5028
+	desc = EVTDESC_SoA_5028
+	picture = GFX_evt_burning_house
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5028
+		ai_chance = {
+			factor = 80
+		}
+		random = {
+			chance = 10
+			add_trait = wounded
+			hidden_tooltip = {
+				character_event = {
+					id = 38280 #Notify Wounded
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { trait = brave } }
+			random = {
+				chance = 30
+				add_trait = brave
+				hidden_tooltip = {
+					character_event = {
+						id = 38270 #Notify brave
+					}
+				}
+			}
+		}
+		character_event = { id = exc.43 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5028
+		ai_chance = {
+			factor = 20
+		}
+		if = {
+			limit = { NOR = { trait = craven trait = berserker } }
+			add_trait = craven
+		}
+		character_event = { id = exc.43 days = 10 }
+	}
+}
+
+# Danger on road  - broken bridge #
+character_event = {
+	id = exc.43
+	desc = EVTDESC_SoA_5030
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5030
+		ai_chance = {
+			factor = 10
+		}
+		random = {
+			chance = 20
+			add_trait = wounded
+			hidden_tooltip = {
+				character_event = {
+					id = 38280 #Notify Wounded
+				}
+			}
+		}
+		character_event = { id = exc.44 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5030
+		ai_chance = {
+			factor = 45
+		}
+		wealth = -10
+		character_event = { id = exc.44 days = 10 }
+	}
+	option = {
+		name = EVTOPTC_SoA_5030
+		ai_chance = {
+			factor = 45
+		}
+		wealth = -30
+		if = {
+			limit = { NOT = { trait = charitable } }
+			add_trait = charitable
+		}
+		character_event = { id = exc.44 days = 10 }
+	}
+}
+
+# Philosophical ponderings #
+character_event = {
+	id = exc.44
+	desc = EVTDESC_SoA_5031
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5031
+		if = {
+			limit = {
+				NOR = {
+					lifestyle_traits = 1
+					has_dlc = "Way of Life"
+				}
+			}
+			random_list = {
+				10 = {
+					add_trait = scholar
+				}
+				10 = {
+					add_trait = mystic
+				}
+				10 = {
+					add_trait = poet
+				}
+				10 = {
+					add_trait = zealous
+				}
+				10 = {
+					add_trait = depressed
+				}
+				50 = {
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					lifestyle_traits = 1
+					has_dlc = "Way of Life"
+				}
+			}
+			random_list = {
+				20 = {
+					add_trait = poet
+				}
+				20 = {
+					add_trait = zealous
+				}
+				10 = {
+					add_trait = depressed
+				}
+				50 = {
+				}
+			}
+		}
+		character_event = { id = exc.45 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5031
+		if = {
+			limit = { NOT = { trait = cynical } }
+			random = {
+				chance = 20
+				add_trait = cynical
+				hidden_tooltip = {
+					character_event = {
+						id = 38258 #Notify Cynical
+					}
+				}
+			}
+		}
+		character_event = { id = exc.45 days = 10 }
+	}
+}
+
+# Trouble on road - weather #
+character_event = {
+	id = exc.45
+	desc = EVTDESC_SoA_5026
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5026
+		ai_chance = {
+			factor = 10
+		}
+		piety = 50
+		random_list = {
+			10 = {
+				give_pneumonic_effect = yes
+			}
+			30 = {
+				give_ill_effect = yes
+			}
+			60 = {
+			}
+		}
+		character_event = { id = exc.46 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5026
+		ai_chance = {
+			factor = 90
+		}
+		if = {
+			limit = { NOT = { trait = cynical } }
+			add_trait = cynical
+		}
+		random_list = {
+			5 = {
+				give_pneumonic_effect = yes
+			}
+			15 = {
+				give_ill_effect = yes
+			}
+			80 = {
+			}
+		}
+		character_event = { id = exc.46 days = 10 }
+	}
+}
+
+# Meeting people on travels - good Samaritan #
+character_event = {
+	id = exc.46
+	desc = EVTDESC_SoA_5032
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5032
+		ai_chance = {
+			factor = 90
+		}
+		wealth = -10
+		if = {
+			limit = { NOT = { trait = kind } }
+			add_trait = kind
+		}
+		character_event = { id = exc.47 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5032
+		ai_chance = {
+			factor = 10
+		}
+		if = {
+			limit = { trait = kind }
+			remove_trait = kind
+		}
+		character_event = { id = exc.47 days = 10 }
+	}
+}
+
+# Meeting people on travels - Noah's ark #
+narrative_event = {
+	id = exc.47
+	title = EVTNAME_SoA_5033
+	desc = EVTDESC_SoA_5033
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5033
+		if = {
+			limit = { NOT = { trait = arbitrary } }
+			add_trait = arbitrary
+		}
+		character_event = { id = exc.48 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5033
+		if = {
+			limit = { NOT = { trait = charitable } }
+			add_trait = charitable
+		}
+		character_event = { id = exc.48 days = 10 }
+	}
+	option = {
+		name = EVTOPTC_SoA_5033
+		custom_tooltip = { text = noahs_ark_cats_dogs }
+		character_event = { id = exc.48 days = 10 }
+	}
+}
+
+# Meeting people on travels - bread and fish #
+character_event = {
+	id = exc.48
+	desc = EVTDESC_SoA_5034
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5034
+		wealth = -5
+		if = {
+			limit = { NOT = { trait = charitable } }
+			add_trait = charitable
+		}
+		character_event = { id = exc.49 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5034
+		if = {
+			limit = {
+				trait = charitable
+			}
+		remove_trait = charitable
+		character_event = { id = exc.49 days = 10 }
+		}
+	}
+}
+
+# Learning something about boats #
+character_event = {
+	id = exc.49
+	desc = EVTDESC_SoA_5035
+	picture = GFX_evt_merchant_ship_at_sea_republic
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5035
+		random_list = {
+			15 = { change_martial = 1 }
+			15 = { change_learning = 1 }
+			70 = {}
+		}
+		character_event = { id = exc.50 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5035
+		piety = 30
+		character_event = { id = exc.50 days = 10 }
+	}
+}
+
+# Learning something about bridges #
+character_event = {
+	id = exc.50
+	desc = EVTDESC_SoA_5036
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5036
+		random = {
+			chance = 30
+			change_learning = 1
+		}
+		character_event = { id = exc.51 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5036
+		if = {
+			limit = { NOT = { trait = proud } }
+			random = {
+				chance = 30
+				add_trait = proud
+				hidden_tooltip = {
+					character_event = {
+						id = 38261 #Notify Proud
+					}
+				}
+			}
+		}
+		character_event = { id = exc.51 days = 10 }
+	}
+}
+
+# Falls ill from trials on journey #
+character_event = {
+	id = exc.51
+	desc = EVTDESC_SoA_5037
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5037
+		ai_chance = {
+			factor = 10
+		}
+		piety = 10
+		random = {
+			chance = 40
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Reapers"
+					}
+				}
+				add_trait = ill
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				add_symptom_effect = yes
+			}
+		}
+		character_event = { id = exc.52 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5037
+		ai_chance = {
+			factor = 90
+		}
+		random = {
+			chance = 20
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Reapers"
+					}
+				}
+				add_trait = ill
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				add_symptom_effect = yes
+			}
+		}
+		if = {
+			limit = { NOT = { trait = cynical } }
+			random = {
+				chance = 50
+				add_trait = cynical
+				hidden_tooltip = {
+					character_event = {
+						id = 38258 #Notify Cynical
+					}
+				}
+			}
+		}
+		character_event = { id = exc.52 days = 10 }
+	}
+}
+
+# Moral choice - steal or give #
+character_event = {
+	id = exc.52
+	desc = EVTDESC_SoA_5038
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5038
+		character_event = { id = exc.53 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5038
+		wealth = -10
+		if = {
+			limit = { NOT = { trait = charitable } }
+			add_trait = charitable
+		}
+		character_event = { id = exc.53 days = 10 }
+	}
+	option = {
+		name = EVTOPTC_SoA_5038
+		wealth = 10
+		if = {
+			limit = { trait = charitable }
+			remove_trait = charitable
+		}
+		if = {
+			limit = { NOT = { trait = deceitful } }
+			add_trait = deceitful
+		}
+		character_event = { id = exc.53 days = 10 }
+	}
+	option = {
+		name = EVTOPTD_SoA_5038
+		if = {
+			limit = { trait = charitable }
+			remove_trait = charitable
+		}
+		character_event = { id = exc.53 days = 10 }
+	}
+}
+
+# Trouble on road - lost #
+character_event = {
+	id = exc.53
+	desc = EVTDESC_SoA_5027
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5027
+		ai_chance = {
+			factor = 50
+		}
+		if = {
+			limit = { NOT = { trait = wroth } }
+			add_trait = wroth
+			hidden_tooltip = {
+				character_event = {
+					id = 38254 #Notify Wroth
+				}
+			}
+		}
+		character_event = { id = exc.54 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5027
+		ai_chance = {
+			factor = 50
+		}
+		if = {
+			limit = { NOT = { trait = patient } }
+			add_trait = patient
+			hidden_tooltip = {
+				character_event = {
+					id = 38264 #Notify Patient
+				}
+			}
+		}
+		character_event = { id = exc.54 days = 10 }
+	}
+}
+
+# Sees a guiding star - religious experience #
+character_event = {
+	id = exc.54
+	desc = EVTDESC_SoA_5039
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_SoA_5039
+		if = {
+			limit = { NOT = { trait = zealous } }
+			random = {
+				chance = 20
+				add_trait = zealous
+				hidden_tooltip = {
+					character_event = {
+						id = 38269 #Notify Zealous
+					}
+				}
+			}
+		}
+		character_event = { id = exc.401 days = 10 }
+	}
+	option = {
+		name = EVTOPTB_SoA_5039
+		if = {
+			limit = { NOT = { trait = cynical } }
+			random = {
+				chance = 20
+				add_trait = cynical
+				hidden_tooltip = {
+					character_event = {
+						id = 38258 #Notify Cynical
+					}
+				}
+			}
+		}
+		character_event = { id = exc.401 days = 10 }
+	}
+}
+
+################ FINDING CAMELOT ###################
+
+# Finding Camelot pt1 #
+narrative_event = {
+	id = exc.401
+	title = exc.t.401
+	desc = exc.d.401
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.401
+		hidden_tooltip = { character_event = { id = exc.402 days = 1 } }
+	}
+}
+
+# Finding Camelot pt2 #
+narrative_event = {
+	id = exc.402
+	title = exc.t.402
+	desc = exc.d.402
+	picture = GFX_evt_mysterious_forest
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.402
+		hidden_tooltip = { character_event = { id = exc.403 days = 0 } }
+	}
+}
+
+# Finding Camelot pt3 #
+narrative_event = {
+	id = exc.403
+	title = exc.t.403
+	desc = exc.d.403
+	picture = GFX_evt_rider_adventure
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.403
+		custom_tooltip = { text = exc.ctt.a.403 }
+		hidden_tooltip = { character_event = { id = exc.5 days = 4 } }
+	}
+}
+
+# Searching for the Lady #
+character_event = {
+	id = "exc.5"
+	desc = "exc.d.5"
+	picture = "GFX_evt_bandits"
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = "exc.o.a.5"
+	custom_tooltip = { text = exc.ctt.a.5 }
+	tooltip_info = patient
+	trigger = {
+		trait = patient
+		}
+	set_character_flag = excalibur_patient
+	character_event = { id = exc.601 days = 5 }
+	}
+    option = {
+	name = "exc.o.b.5"
+	custom_tooltip = { text = exc.ctt.b.5 }
+	hidden_tooltip = { character_event = { id = exc.18 days = 5 } }
+	}
+}
+
+# Find the Lady pt1 #
+narrative_event = {
+	id = exc.601
+	title = exc.t.601
+	desc = exc.d.601
+	picture = GFX_evt_mysterious_forest
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.601
+		custom_tooltip = { text = exc.ctt.a.601 }
+		hidden_tooltip = { character_event = { id = exc.602 days = 4 } }
+	}
+}
+
+# Find the Lady pt 2#
+narrative_event = {
+	id = exc.602
+	title = exc.t.602
+	desc = exc.d.602
+	picture = GFX_evt_mysterious_forest
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.602
+		custom_tooltip = { text = exc.ctt.a.602 }
+		immediate = {
+			hidden_tooltip = { set_variable = { which = lady_score value = 0 } }
+
+			if = {
+				limit = { 
+					OR = {
+						has_character_flag = excalibur_patient
+					}
+				}
+				hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+				clr_character_flag = excalibur_patient
+			}
+		}
+		hidden_tooltip = { character_event = { id = exc.7 days = 5 } }			# Kindness
+		#hidden_tooltip = { character_event = { id = exc.8 days = 10 } }		# Bravery
+		#hidden_tooltip = { character_event = { id = exc.9 days = 15 } }		# Chastity
+		#hidden_tooltip = { character_event = { id = exc.10 days = 20 } }		# Temperance
+		#hidden_tooltip = { character_event = { id = exc.11 days = 25 } }		# Charity
+		#hidden_tooltip = { character_event = { id = exc.12 days = 30 } }		# Diligence
+		#hidden_tooltip = { character_event = { id = exc.13 days = 35 } }		# Humility
+		#hidden_tooltip = { character_event = { id = exc.14 days = 40 } }		# Justice
+		#hidden_tooltip = { character_event = { id = exc.15 days = 45 } }		# Honesty
+		#hidden_tooltip = { character_event = { id = exc.16 days = 50 } }		# Verdict
+	}
+}
+
+################ THE LADY TESTS YOU ###################
+
+# Kindness #
+character_event = {
+	id = exc.7
+	picture = GFX_evt_court_physician
+	desc = exc.d.7
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	#Kind
+	option = {
+		name = exc.o.a.7
+		ai_chance = { factor = 100 }
+		tooltip_info = kind
+		trigger = {
+			trait = kind
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.8 days = 1 } }
+	} 
+	#Cruel
+	option = {
+		name = exc.o.b.7
+		ai_chance = { factor = 100 }
+		tooltip_info = cruel
+		trigger = {
+			trait = cruel
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.8 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.7
+		ai_chance = { factor = 1 }
+		trigger = { NOT = { trait = kind } NOT = { trait = cruel } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.8 days = 1 } }
+	}
+}
+
+# Bravery #
+character_event = {
+	id = exc.8
+	picture = GFX_evt_court_physician
+	desc = exc.d.8
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	#Brave
+	option = {
+		name = exc.o.a.8
+		ai_chance = { factor = 100 }
+		tooltip_info = brave
+		trigger = {
+			trait = brave
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.9 days = 1 } }
+	} 
+	#Craven
+	option = {
+		name = exc.o.b.8
+		ai_chance = { factor = 100 }
+		tooltip_info = craven
+		trigger = {
+			trait = craven
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.9 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.8
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { trait = brave } NOT = { trait = craven } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.9 days = 1 } }
+	}
+}
+
+# Chastity #
+character_event = {
+	id = exc.9
+	picture = GFX_evt_court_physician
+	desc = exc.d.9
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	#Chaste
+	option = {
+		name = exc.o.a.9
+		ai_chance = { factor = 100 }
+		tooltip_info = chaste
+		trigger = {
+			trait = chaste
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.10 days = 1 } }
+	} 
+	#Lustful
+	option = {
+		name = exc.o.b.9
+		ai_chance = { factor = 100 }
+		tooltip_info = lustful
+		trigger = {
+			trait = lustful
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.10 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.9
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { trait = chaste } NOT = { trait = lustful } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.10 days = 1 } }
+	}
+}
+
+# Temperance #
+character_event = {
+	id = exc.10
+	picture = GFX_evt_court_physician
+	desc = exc.d.10
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	#temperate
+	option = {
+		name = exc.o.a.10
+		ai_chance = { factor = 100 }
+		tooltip_info = temperate
+		trigger = {
+			trait = temperate
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.11 days = 1 } }
+	} 
+	#gluttonous
+	option = {
+		name = exc.o.b.10
+		ai_chance = { factor = 100 }
+		tooltip_info = gluttonous
+		trigger = {
+			trait = gluttonous
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.11 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.10
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { trait = temperate } NOT = { trait = gluttonous } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.11 days = 1 } }
+	}
+}
+
+# Charity #
+character_event = {
+	id = exc.11
+	picture = GFX_evt_court_physician
+	desc = exc.d.11
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	#charitable
+	option = {
+		name = exc.o.a.11
+		ai_chance = { factor = 100 }
+		tooltip_info = charitable
+		trigger = {
+			trait = charitable
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.12 days = 1 } }
+	} 
+	#greedy
+	option = {
+		name = exc.o.b.11
+		ai_chance = { factor = 100 }
+		tooltip_info = greedy
+		trigger = {
+			trait = greedy
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.12 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.11
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { trait = charitable } NOT = { trait = greedy } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.12 days = 1 } }
+	}
+}
+
+# Diligence #
+character_event = {
+	id = exc.12
+	picture = GFX_evt_court_physician
+	desc = exc.d.12
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	#diligent
+	option = {
+		name = exc.o.a.12
+		ai_chance = { factor = 100 }
+		tooltip_info = diligent
+		trigger = {
+			trait = diligent
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.13 days = 1 } }
+	} 
+	#slothful
+	option = {
+		name = exc.o.b.12
+		ai_chance = { factor = 100 }
+		tooltip_info = slothful
+		trigger = {
+			trait = slothful
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.13 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.12
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { trait = diligent } NOT = { trait = slothful } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.13 days = 1 } }
+	}
+}
+
+# Humility #
+character_event = {
+	id = exc.13
+	picture = GFX_evt_court_physician
+	desc = exc.d.13
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	#humble
+	option = {
+		name = exc.o.a.13
+		ai_chance = { factor = 100 }
+		tooltip_info = humble
+		trigger = {
+			trait = humble
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.14 days = 1 } }
+	} 
+	#proud
+	option = {
+		name = exc.o.b.13
+		ai_chance = { factor = 100 }
+		tooltip_info = proud
+		trigger = {
+			trait = proud
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.14 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.13
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { trait = humble} NOT = { trait = proud } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.14 days = 1 } }
+	}
+}
+
+# Justice #
+character_event = {
+	id = exc.14
+	picture = GFX_evt_court_physician
+	desc = exc.d.14
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	#just
+	option = {
+		name = exc.o.a.14
+		ai_chance = { factor = 100 }
+		tooltip_info = just
+		trigger = {
+			trait = just
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.15 days = 1 } }
+	} 
+	#arbitrary
+	option = {
+		name = exc.o.b.14
+		ai_chance = { factor = 100 }
+		tooltip_info = arbitrary
+		trigger = {
+			trait = arbitrary
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.15 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.14
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { trait = just } NOT = { trait = arbitrary } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.15 days = 1 } }
+	}
+}
+
+# Honesty #
+character_event = {
+	id = exc.15
+	picture = GFX_evt_court_physician
+	desc = exc.d.15
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	#honest
+	option = {
+		name = exc.o.a.15
+		ai_chance = { factor = 100 }
+		tooltip_info = honest
+		trigger = {
+			trait = honest
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
+		hidden_tooltip = { character_event = { id = exc.16 days =15 } }
+	} 
+	#deceitful
+	option = {
+		name = exc.o.b.15
+		ai_chance = { factor = 100 }
+		tooltip_info = deceitful
+		trigger = {
+			trait = deceitful
+			}
+		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
+		hidden_tooltip = { character_event = { id = exc.16 days = 1 } }
+	}
+	#Neutral
+	option = {
+		name = exc.o.c.15
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { trait = honest } NOT = { trait = deceitful } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { character_event = { id = exc.16 days = 1 } }
+	}
+}
+
+# Verdict #
+narrative_event = {
+	id = exc.16
+	title = exc.t.16
+	border = GFX_event_narrative_frame_intrigue
+	picture = GFX_evt_religious_exultation
+	
+	#You are worthy
+	desc = {
+		trigger = { check_variable = { which = lady_score value = 4 } }
+		text = exc.d.a.16
+		picture = GFX_evt_religious_exultation
+	}
+	#You are not worthy
+	desc = {
+		trigger = { NOT = { check_variable = { which = lady_score value = 4 } } }
+		text = exc.d.b.16
+		picture = GFX_evt_bad_news
+	}
+
+	is_triggered_only = yes
+
+	#You are worthy
+	option = {
+		trigger = { check_variable = { which = lady_score value = 4 } }
+		name = exc.o.a.16
+		add_artifact = Excalibur
+		set_global_flag = excalibur_found
+		clr_character_flag = excalibur_searching
+		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
+		hidden_tooltip = { character_event = { id = exc.17 days = 5 } }
+	}
+	#You are not worthy
+	option = {
+		trigger = { NOT = { check_variable = { which = lady_score value = 4 } } }
+		name = exc.o.b.16
+		hidden_tooltip = { character_event = { id = exc.18 days = 5 } }
+	}
+}
+
+################ HEADING HOME ###################
+
+# Positive Pondering #
+character_event = {
+	id = exc.17
+	desc = exc.d.17
+	picture = GFX_evt_idyllic_fishing
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.17
+		prestige = 500
+		set_character_flag = good_pilgrimage
+		clr_character_flag = bad_pilgrimage
+		clr_character_flag = abominable_pilgrimage
+		hidden_tooltip = { character_event = { id = SoA.5090 days = 5 } }
+	}
+}
+
+# Negative Pondering #
+character_event = {
+	id = exc.18
+	desc = exc.d.18
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.18
+		prestige = -200
+		clr_character_flag = good_pilgrimage
+		set_character_flag = bad_pilgrimage
+		clr_character_flag = abominable_pilgrimage
+		hidden_tooltip = { character_event = { id = SoA.5090 days = 5 } }
+			random = {
+				chance = 30
+				add_trait = depressed
+				hidden_tooltip = {
+					character_event = {
+						id = 38288 } # Notify Depressed
+					}
+				}
+			}
+	}

@@ -1,0 +1,220 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+#### Event 1 - Message about the Lady of the Lake ####
+
+exc.t.1;The Tale of the Lady;;;;;;;;;;;;;x
+
+exc.d.1;While feasting in your hold one night, you are approached by an old priest. His robes are worn & muddied from travel, his hair wild & eyes gaunt. When he speaks you hear a tremor in his voice.
+"My King, I have travelled far, across hard roads to find you. Whilst deep in prayer one night I was blessed with a vision. I found myself wandering the edge of a lake, where, I do not know. I could see a ruined watchtower in the distance atop a mighty hill. It was then that, from the lake, emerged the Lady, beautiful yet terrifying. I fell to my knees in her presence. In her hands she held a sword, as I gazed upon it a name filled my mind, yours. The Lady is waiting for you, all you need do is find her.";;;;;;;;;;;;;x
+
+exc.o.a.1;I trust in his conviction, I will search for The Lady!;;;;;;;;;;;;;x
+
+exc.o.b.1;Guards! Remove this man, I will hear no more of his dreams!;;;;;;;;;;;;;x
+
+
+#### Event 2 - Planning to find Camelot ####
+
+exc.d.2;The words of the Priest have been ever in your mind this past week, their vagueness a constant frustration. Then one day, as you wander the grounds, you overhear a mother telling a story to her children. It is the tale of King Arthur, you listen for a while remembering the tale well from when you were young. Suddenly, your eyes widen as you realise that this is what the Priest spoke of, the Lady, the sword, the ruins, it all fits. Your mind all a flurry, you race to your quarters.;;;;;;;;;;;;;x 
+
+exc.o.a.2;I must find Camelot!;;;;;;;;;;;;;x
+
+
+#### Event 3 - Setting out for Camelot ####
+
+exc.d.3;Your bags are packed and your horse saddled. You scour your chambers one last time before departing. As you head to the stables, you pass your advisors already attending to business in your stead. The early morning sun falls gently on you and a light breeze caresses your face, a good day to ride. You know not where your search will take you or what challenges await, but as you settle into the saddle your confidence is high. As you set off, you glance back briefly...;;;;;;;;;;;;;x
+
+exc.o.a.3;And so, my journey begins...;;;;;;;;;;;;;x
+
+exc.o.b.3;What am I doing?! This is a fool's errand.;;;;;;;;;;;;;x
+
+
+#### Event 4 - Finding Camelot Pt 1 ####
+
+exc.t.401;Tired, Troubled Thoughts;;;;;;;;;;;;;x
+
+exc.d.401;For many months you have wandered the length & breadth of the land in search of Camelot. Your adventures thus far already make for a grand tale, however, your prize still eludes you. Each night, as you rest by the fire, you pour over the books & papers you brought with you looking for any clue, any lead to follow.
+The maps you have collected on your journey have become worn from constant use. Your pack has grown light and your purse empty, you know you cannot continue the search for much longer. You followed the star, this is where is led you, isn't it? Were you a fool for believing yourself to be worthy?
+Your doubts haunt you as you slip into an uneasy sleep.;;;;;;;;;;;;;x
+
+exc.o.a.401;This will be a long night...;;;;;;;;;;;;;x
+
+
+#### Event 4 - Finding Camelot Pt 2 ####
+
+exc.t.402;A Song on the Wind;;;;;;;;;;;;;x
+
+exc.d.402;You wake suddenly, the cold night air stinging your face, the oppressive darkness pressing in on you, only held back by the fire gently crackling away nearby. You are about to return to your slumber when you hear it. A faint sound carries to you on the breeze, an unearthly melody, as you listen your mind is awash with emotions. It is a beautiful feeling.
+Pulling yourself from your bedding you head towards the music, stopping only to light a torch. The ground beneath your feet is thick with leaves which rustle noisily with each step you take, branches appear from the darkness to claw at your head and the night wind continues to howl. Still, you press on, deeper into the forest.;;;;;;;;;;;;;x
+
+exc.o.a.402;Where is it coming from?;;;;;;;;;;;;;x
+
+
+#### Event 4 - Finding Camelot Pt 3 ####
+
+exc.t.403;In Darkness, a Light;;;;;;;;;;;;;x
+
+exc.d.403;Suddenly, your foot slips, losing its grip on the wet, muddy ground. Your torch falls from your hand, immediately extinguishing as it hits the ground. The darkness rushes in, like a beast jumping its prey, as you scramble to regain your footing. Alone in the dark, your breathing harsh and ragged, you try to work out your way back to camp. That is when you see it, a light, a gentle glow between the trees not far ahead of you.
+Following the light, you continue through the forest. Soon you break the treeline and there, basking in the glow of the light, is Camelot. Though it's walls & battlements have crumbled with time, it still stands proud overlooking the lake.;;;;;;;;;;;;;x
+
+exc.o.a.403;Camelot, the seat of King Arthur, it's incredible!;;;;;;;;;;;;;x
+
+exc.ctt.a.403; You set out in search of the Lady from the Priest's vision...;;;;;;;;;;;;;x
+
+
+#### Event 5 - Searching for the Lady ####
+
+exc.d.5;You have been walking the edge of the lake for many hours, sometimes calling out, other times in quiet thought. The Sun has begun to rise, casting long shadows across the open space around you. The light from the battlements, so bright when you arrived has long since faded from sight. A cool morning mist lies gently upon the water and the chatter of the forest fills the air. Your mind begins to wander...;;;;;;;;;;;;;x
+
+exc.o.a.5;I must have patience, the Lady will come.;;;;;;;;;;;;;x
+
+exc.o.b.5;I cannot wait here any longer, I must return home.;;;;;;;;;;;;;x
+
+exc.ctt.a.5; You continue the search...;;;;;;;;;;;;;x
+
+exc.ctt.b.5;You give up the search for the Lady and return to your court.;;;;;;;;;;;;;x
+
+
+#### Event 6 - Find the Lady Pt1 ####
+
+exc.t.601;TITLE;;;;;;;;;;;;;x
+
+exc.d.601;Your patience is rewarded. As the sun begins to set behind the wooded hills and the birds sing their last song, you feel an eerie calm settle over the lake. The warm breeze gone, replaced by a cold, heavy chill that presses sharply in on you. Your breath becomes an icy haze as it leaves your mouth, your hair stands on end and your heart begins to race.
+Despite the stillness of the air, the mist on the lake begins to swirl, colours and shapes dancing within. You find yourself walking towards the water, something is pulling you to it.
+The music you heard the night before begins to fill your ears as you inch closer to the glassy water.;;;;;;;;;;;;;x
+
+exc.o.a.601;OPTION_A;;;;;;;;;;;;;x
+
+
+#### Event 6 - Find the Lady Pt2 ####
+
+exc.t.602;TITLE;;;;;;;;;;;;;x
+
+exc.d.602;At its crescendo the music stops as suddenly as it started. The mist parting to reveal her, the Lady, exactly as the Priest described. She walks slowly towards you, her footfalls not disturbing the stillness of the water. Her flowing white gown and long, golden hair cling to her form. When she speaks, her voice is firm, but kind.;;;;;;;;;;;;;x
+
+exc.o.a.602;OPTION_A;;;;;;;;;;;;;x
+
+
+#### Event 7 - Kindness trial ####
+
+exc.d.7;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.7;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.7;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.7;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 8 - Bravery trial ####
+
+exc.d.8;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.8;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.8;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.8;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 9 - Chastity trial ####
+
+exc.d.9;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.9;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.9;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.9;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 10 - Temperance trial ####
+
+exc.d.10;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.10;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.10;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.10;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 11 - Charity trial ####
+
+exc.d.11;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.11;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.11;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.11;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 12 - Diligence trial ####
+
+exc.d.12;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.12;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.12;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.12;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 13 - Humility trial ####
+
+exc.d.13;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.13;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.13;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.13;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 14 - Justice trial ####
+
+exc.d.14;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.14;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.14;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.14;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 15 - Honesty trial ####
+
+exc.d.15;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.15;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.15;OPTION_B;;;;;;;;;;;;;x
+
+exc.o.c.15;OPTION_C;;;;;;;;;;;;;x
+
+
+#### Event 16 - The Verdict ####
+
+exc.t.16;TITLE;;;;;;;;;;;;;x
+
+exc.d.a.16;DESCRIPTION_A;;;;;;;;;;;;;x
+
+exc.d.b.16;DESCRIPTION_B;;;;;;;;;;;;;x
+
+exc.o.a.16;OPTION_A;;;;;;;;;;;;;x
+
+exc.o.b.16;OPTION_B;;;;;;;;;;;;;x
+
+
+#### Event 17 - Positive Pondering ####
+
+exc.d.17;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.17;OPTION_A;;;;;;;;;;;;;x
+
+
+#### Event 18 - Negative Pondering ####
+
+exc.d.018;DESCRIPTION;;;;;;;;;;;;;x
+
+exc.o.a.18;OPTION_A;;;;;;;;;;;;;x
