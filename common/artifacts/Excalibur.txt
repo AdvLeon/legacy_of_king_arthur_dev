@@ -24,6 +24,6 @@ Excalibur = {
 	}
 	quality = 5
 	stacking = no
-	picture = "GFX_Excalibur"
+	picture = "GFX_sword_of_heroes"
 	slot = weapon
 	}
