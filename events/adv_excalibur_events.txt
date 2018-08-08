@@ -177,9 +177,6 @@ character_event = {
 
 	option = {
 		name = exc.o.a.2
-		trigger = {
-			year = 800
-		}
 		ai_chance = { factor = 25 }
 		set_character_flag = pilgrimage_to_camelot
 		hidden_tooltip = { character_event = { id = exc.3 days = 14 } }
