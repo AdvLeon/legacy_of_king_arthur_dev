@@ -1436,10 +1436,6 @@ narrative_event = {
 	option = {
 		trigger = { check_variable = { which = lady_score value = 4 } }
 		name = exc.o.a.16
-		add_artifact = Excalibur
-		set_global_flag = excalibur_found
-		clr_character_flag = excalibur_searching
-		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
 		hidden_tooltip = { character_event = { id = exc.17 days = 5 } }
 	}
 	#You are not worthy
@@ -1450,19 +1446,39 @@ narrative_event = {
 	}
 }
 
-################ HEADING HOME ###################
-
-# Positive Pondering #
-character_event = {
+# Excalibur! #
+narrative_event = {
 	id = exc.17
+	title = exc.t.17
 	desc = exc.d.17
-	picture = GFX_evt_idyllic_fishing
-	border = GFX_event_normal_frame_religion
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_narrative_frame_religion
 	
 	is_triggered_only = yes
 
 	option = {
 		name = exc.o.a.17
+		add_artifact = Excalibur
+		set_global_flag = excalibur_found
+		clr_character_flag = excalibur_searching
+		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
+		hidden_tooltip = { character_event = { id = exc.18 days = 4 } }
+	}
+}
+
+################ HEADING HOME ###################
+
+# Positive Pondering #
+character_event = {
+	id = exc.18
+	desc = exc.d.18
+	picture = GFX_evt_idyllic_fishing
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+
+	option = {
+		name = exc.o.a.18
 		prestige = 500
 		set_character_flag = good_pilgrimage
 		clr_character_flag = bad_pilgrimage
@@ -1473,15 +1489,15 @@ character_event = {
 
 # Negative Pondering #
 character_event = {
-	id = exc.18
-	desc = exc.d.18
+	id = exc.19
+	desc = exc.d.19
 	picture = GFX_evt_bad_news
-	border = GFX_event_normal_frame_religion
+	border = GFX_event_normal_frame_martial
 	
 	is_triggered_only = yes
 
 	option = {
-		name = exc.o.a.18
+		name = exc.o.a.19
 		prestige = -200
 		clr_character_flag = good_pilgrimage
 		set_character_flag = bad_pilgrimage
