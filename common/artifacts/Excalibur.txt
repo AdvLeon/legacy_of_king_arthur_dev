@@ -7,7 +7,7 @@ Excalibur = {
 	martial = 5
 	combat_rating = 3
 	command_modifier = {
-		morale_offence = 0.20
+		morale_offence = 0.40
 		morale_defence = 0.20
 	}
 	active = {
