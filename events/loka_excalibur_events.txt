@@ -1360,7 +1360,7 @@ narrative_event = {
 
 	option = {
 		name = exc.o.a.17
-		add_artifact = loa.excalibur
+		add_artifact = loka.excalibur
 		set_global_flag = excalibur_found
 		clr_character_flag = excalibur_searching
 		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
