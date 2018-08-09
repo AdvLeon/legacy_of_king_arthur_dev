@@ -952,7 +952,6 @@ character_event = {
 	trigger = {
 		trait = patient
 		}
-	set_character_flag = excalibur_patient
 	character_event = { id = exc.601 days = 5 }
 	}
     option = {
@@ -994,16 +993,7 @@ narrative_event = {
 		custom_tooltip = { text = exc.ctt.a.602 }
 		immediate = {
 			hidden_tooltip = { set_variable = { which = lady_score value = 0 } }
-
-			if = {
-				limit = { 
-					OR = {
-						has_character_flag = excalibur_patient
-					}
-				}
-				hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
-				clr_character_flag = excalibur_patient
-			}
+			hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
 		}
 		hidden_tooltip = { character_event = { id = exc.7 days = 5 } }			# Kindness
 		#hidden_tooltip = { character_event = { id = exc.8 days = 10 } }		# Bravery
@@ -1015,7 +1005,6 @@ narrative_event = {
 		#hidden_tooltip = { character_event = { id = exc.14 days = 40 } }		# Justice
 		#hidden_tooltip = { character_event = { id = exc.15 days = 45 } }		# Honesty
 		#hidden_tooltip = { character_event = { id = exc.16 days = 50 } }		# Verdict
-	}
 }
 
 ################ THE LADY TESTS YOU ###################
