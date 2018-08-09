@@ -513,7 +513,7 @@ character_event = {
 			limit = { NOT = { trait = kind } }
 			add_trait = kind
 		}
-		character_event = { id = exc.47 days = 10 }
+		narrative_event = { id = exc.47 days = 10 }
 	}
 	option = {
 		name = EVTOPTB_SoA_5032
@@ -524,7 +524,7 @@ character_event = {
 			limit = { trait = kind }
 			remove_trait = kind
 		}
-		character_event = { id = exc.47 days = 10 }
+		narrative_event = { id = exc.47 days = 10 }
 	}
 }
 
@@ -834,7 +834,7 @@ character_event = {
 				}
 			}
 		}
-		character_event = { id = exc.401 days = 10 }
+		narrative_event = { id = exc.401 days = 10 }
 	}
 	option = {
 		name = EVTOPTB_SoA_5039
@@ -850,7 +850,7 @@ character_event = {
 				}
 			}
 		}
-		character_event = { id = exc.401 days = 10 }
+		narrative_event = { id = exc.401 days = 10 }
 	}
 }
 
@@ -868,7 +868,7 @@ narrative_event = {
 
 	option = {
 		name = exc.o.a.401
-		hidden_tooltip = { character_event = { id = exc.402 days = 1 } }
+		hidden_tooltip = { narrative_event = { id = exc.402 days = 1 } }
 	}
 }
 
@@ -884,7 +884,7 @@ narrative_event = {
 
 	option = {
 		name = exc.o.a.402
-		hidden_tooltip = { character_event = { id = exc.403 days = 0 } }
+		hidden_tooltip = { narrative_event = { id = exc.403 days = 0 } }
 	}
 }
 
@@ -915,18 +915,18 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-	name = "exc.o.a.5"
-	custom_tooltip = { text = exc.ctt.a.5 }
-	tooltip_info = patient
-	trigger = {
-		trait = patient
+		name = "exc.o.a.5"
+		custom_tooltip = { text = exc.ctt.a.5 }
+		tooltip_info = patient
+		trigger = {
+			trait = patient
+			}
+		narrative_event = { id = exc.601 days = 5 }
 		}
-	character_event = { id = exc.601 days = 5 }
-	}
     option = {
-	name = "exc.o.b.5"
-	custom_tooltip = { text = exc.ctt.b.5 }
-	hidden_tooltip = { character_event = { id = exc.18 days = 5 } }
+		name = "exc.o.b.5"
+		custom_tooltip = { text = exc.ctt.b.5 }
+		hidden_tooltip = { character_event = { id = exc.18 days = 5 } }
 	}
 }
 
@@ -943,7 +943,7 @@ narrative_event = {
 	option = {
 		name = exc.o.a.601
 		custom_tooltip = { text = exc.ctt.a.601 }
-		hidden_tooltip = { character_event = { id = exc.602 days = 4 } }
+		hidden_tooltip = { narrative_event = { id = exc.602 days = 4 } }
 	}
 }
 
@@ -960,10 +960,8 @@ narrative_event = {
 	option = {
 		name = exc.o.a.602
 		custom_tooltip = { text = exc.ctt.a.602 }
-		immediate = {
-			hidden_tooltip = { set_variable = { which = lady_score value = 0 } }
-			hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
-		}
+		hidden_tooltip = { set_variable = { which = lady_score value = 0 } }
+		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
 		hidden_tooltip = { character_event = { id = exc.7 days = 5 } }			# Kindness
 		#hidden_tooltip = { character_event = { id = exc.8 days = 10 } }		# Bravery
 		#hidden_tooltip = { character_event = { id = exc.9 days = 15 } }		# Chastity
@@ -1291,7 +1289,7 @@ character_event = {
 			trait = honest
 			}
 		hidden_tooltip = { change_variable = { which = lady_score value = 1 } }
-		hidden_tooltip = { character_event = { id = exc.16 days =15 } }
+		hidden_tooltip = { narrative_event = { id = exc.16 days =15 } }
 	} 
 	#deceitful
 	option = {
@@ -1301,14 +1299,14 @@ character_event = {
 			trait = deceitful
 			}
 		hidden_tooltip = { change_variable = { which = lady_score value = -1 } }
-		hidden_tooltip = { character_event = { id = exc.16 days = 1 } }
+		hidden_tooltip = { narrative_event = { id = exc.16 days = 1 } }
 	}
 	#Neutral
 	option = {
 		ai_chance = { factor = 0 }
 		trigger = { NOT = { trait = honest } NOT = { trait = deceitful } }
 		hidden_tooltip = { change_variable = { which = lady_score value = 0 } }
-		hidden_tooltip = { character_event = { id = exc.16 days = 1 } }
+		hidden_tooltip = { narrative_event = { id = exc.16 days = 1 } }
 	}
 }
 
@@ -1338,7 +1336,7 @@ narrative_event = {
 	option = {
 		trigger = { check_variable = { which = lady_score value = 4 } }
 		name = exc.o.a.16
-		hidden_tooltip = { character_event = { id = exc.17 days = 5 } }
+		hidden_tooltip = { narrative_event = { id = exc.17 days = 5 } }
 	}
 	#You are not worthy
 	option = {
