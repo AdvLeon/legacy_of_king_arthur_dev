@@ -1,5 +1,5 @@
 # Legacy of King Arthur
-# A mod for Crusader Kings 2
+A mod for Crusader Kings 2
 
 Code by AdvLeon
 
