@@ -1,4 +1,4 @@
-loka.excalibur = {
+loka_artifact_excalibur = {
 	monthly_character_prestige = 2
 	monthly_character_piety = 1
 	same_religion_opinion = 5
