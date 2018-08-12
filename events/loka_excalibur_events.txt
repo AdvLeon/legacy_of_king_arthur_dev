@@ -1,8 +1,8 @@
-#################################################
-#
-# ADVLEON'S EXCALIBUR EVENTS
-#
-#################################################
+#####################################################
+#													#
+# 			ADVLEON'S EXCALIBUR EVENTS				#
+#													#
+#####################################################
 
 namespace = loka_excalibur
 
@@ -223,7 +223,7 @@ character_event = {
 
 ################ ON THE ROAD EVENTS #################
 
-# Danger on road - robbers #
+# 1 - Danger on road - robbers #
 character_event = {
 	id = loka_excalibur.41
 	desc = EVTDESC_SoA_5029
@@ -266,7 +266,7 @@ character_event = {
 	}
 }
 
-# Trouble on road - inn on fire #
+# 2 - Trouble on road - inn on fire #
 narrative_event = {
 	id = loka_excalibur.42
 	title = EVTNAME_SoA_5028
@@ -317,7 +317,7 @@ narrative_event = {
 	}
 }
 
-# Danger on road  - broken bridge #
+# 3 - Danger on road  - broken bridge #
 character_event = {
 	id = loka_excalibur.43
 	desc = EVTDESC_SoA_5030
@@ -364,7 +364,7 @@ character_event = {
 	}
 }
 
-# Philosophical ponderings #
+# 4 - Philosophical ponderings #
 character_event = {
 	id = loka_excalibur.44
 	desc = EVTDESC_SoA_5031
@@ -444,7 +444,7 @@ character_event = {
 	}
 }
 
-# Trouble on road - weather #
+# 5 - Trouble on road - weather #
 character_event = {
 	id = loka_excalibur.45
 	desc = EVTDESC_SoA_5026
@@ -494,7 +494,7 @@ character_event = {
 	}
 }
 
-# Meeting people on travels - good Samaritan #
+# 6 - Meeting people on travels - good Samaritan #
 character_event = {
 	id = loka_excalibur.46
 	desc = EVTDESC_SoA_5032
@@ -528,7 +528,7 @@ character_event = {
 	}
 }
 
-# Meeting people on travels - Noah's ark #
+# 7 - Meeting people on travels - Noah's ark #
 narrative_event = {
 	id = loka_excalibur.47
 	title = EVTNAME_SoA_5033
@@ -561,7 +561,7 @@ narrative_event = {
 	}
 }
 
-# Meeting people on travels - bread and fish #
+# 8 - Meeting people on travels - bread and fish #
 character_event = {
 	id = loka_excalibur.48
 	desc = EVTDESC_SoA_5034
@@ -591,7 +591,7 @@ character_event = {
 	}
 }
 
-# Learning something about boats #
+# 9 - Learning something about boats #
 character_event = {
 	id = loka_excalibur.49
 	desc = EVTDESC_SoA_5035
@@ -616,7 +616,7 @@ character_event = {
 	}
 }
 
-# Learning something about bridges #
+# 10 - Learning something about bridges #
 character_event = {
 	id = loka_excalibur.50
 	desc = EVTDESC_SoA_5036
@@ -651,7 +651,7 @@ character_event = {
 	}
 }
 
-# Falls ill from trials on journey #
+# 11 - Falls ill from trials on journey #
 character_event = {
 	id = loka_excalibur.51
 	desc = EVTDESC_SoA_5037
@@ -723,7 +723,7 @@ character_event = {
 	}
 }
 
-# Moral choice - steal or give #
+# 12 - Moral choice - steal or give #
 character_event = {
 	id = loka_excalibur.52
 	desc = EVTDESC_SoA_5038
@@ -768,7 +768,7 @@ character_event = {
 	}
 }
 
-# Trouble on road - lost #
+# 13 - Trouble on road - lost #
 character_event = {
 	id = loka_excalibur.53
 	desc = EVTDESC_SoA_5027
@@ -811,7 +811,7 @@ character_event = {
 	}
 }
 
-# Sees a guiding star - religious experience #
+# 14 - Sees a guiding star - religious experience #
 character_event = {
 	id = loka_excalibur.54
 	desc = EVTDESC_SoA_5039
