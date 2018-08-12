@@ -60,7 +60,6 @@ narrative_event = {
 				value = off
 			}
 			has_artifact = loka_artifact_excalibur
-			has_global_flag = excalibur_found
 			has_character_flag = excalibur_failed
 			has_character_flag = excalibur_searching
 		}
@@ -1350,7 +1349,6 @@ narrative_event = {
 	option = {
 		name = loka_excalibur.option.a.17
 		add_artifact = loka_artifact_excalibur
-		set_global_flag = excalibur_found
 		clr_character_flag = excalibur_searching
 		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
 		hidden_tooltip = { character_event = { id = loka_excalibur.18 days = 4 } }
@@ -1404,3 +1402,93 @@ character_event = {
 				}
 			}
 	}
+	
+################ THE SPEECH ###################
+
+# The Speech pt1 #
+narrative_event = {
+	id = loka_excalibur.20
+	title = loka_excalibur.title.20
+	desc = loka_excalibur.description.20
+	picture = GFX_evt_whispers
+	border = GFX_event_narrative_frame_intrigue
+	
+	min_age = 16
+	only_playable = yes
+	only_capable = yes
+	only_rulers = yes
+	religion_group = christian
+	prisoner = no
+	culture_group = celtic
+	ai = no
+	has_artifact = loka_artifact_excalibur
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = loka_excalibur.option.a.20
+		hidden_tooltip = { narrative_event = { id = loka_excalibur.21 days = 4 } }
+	}
+	option = {
+		name = loka_excalibur.option.b.20
+		capital_scope = {
+			add_province_modifier = {
+				name = marginalised_culture
+				duration = 1825
+			}
+		}
+		random_demesne_province = {
+			limit = {
+				region = custom_england	
+				culture = saxon
+				}
+			add_province_modifier = {
+				name = marginalised_culture
+				duration = 1825
+			}
+		}
+		job_spymaster = {
+			opinion = {
+				modifier = opinion_disappointed
+				who = ROOT
+				years = 3
+			}
+		}
+	}
+}
+
+# The Speech pt2 #
+narrative_event = {
+	id = loka_excalibur.21
+	title = loka_excalibur.title.21
+	desc = loka_excalibur.description.21
+	picture = GFX_evt_powerful_tower
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = loka_excalibur.option.a.21
+		idden_tooltip = { narrative_event = { id = loka_excalibur.22 days = 1 } }
+	}
+}
+
+# The Speech pt3 #
+narrative_event = {
+	id = loka_excalibur.22
+	title = loka_excalibur.title.22
+	desc = loka_excalibur.description.22
+	picture = GFX_evt_prospering_province
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = loka_excalibur.option.a.22
+		prestige = 200
+		piety = 200
+		set_global_flag = saxons_accepted
+	}
+}
