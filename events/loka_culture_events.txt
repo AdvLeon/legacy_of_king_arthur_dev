@@ -1,0 +1,102 @@
+#############################################################
+#															#
+# 			ADVLEON'S CULTURAL CONVERSION EVENTS			#
+#															#
+#############################################################
+
+namespace = loka_culture
+
+# The Brittonic Melting Pot
+narrative_event = {
+	id = loka_culture.1
+	title = loka_culture.title.1
+	desc = loka_culture.description.1
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	ai = no
+	
+	trigger = {
+		OR = { 
+		culture = welsh
+		culture = breton
+			}
+		year = 800
+		has_global_flag = excalibur_found
+		any_demesne_province = {
+			region = custom_england
+			culture = saxon
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 9
+		}
+		modifier = {
+			factor = 0.75
+			learning = 11
+		}
+		modifier = {
+			factor = 0.75
+			learning = 13
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 3 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = loka_culture.option.a.1
+		culture = brittonic
+		random_demesne_province = {
+			limit = {
+				region = custom_england
+				culture = saxon
+			}
+			culture = brittonic
+		}
+	}
+	option = {
+		name = loka_culture.option.b.1
+		random_demesne_province = {
+			limit = {
+				region = custom_england
+				culture = saxon
+			}
+			add_province_modifier = {
+				name = cultural_unrest
+				duration = 730
+			}
+		}
+	}
+}
+
