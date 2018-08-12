@@ -942,7 +942,6 @@ narrative_event = {
 
 	option = {
 		name = loka_excalibur.option.a.601
-		custom_tooltip = { text = loka_excalibur.tooltip.a.601 }
 		hidden_tooltip = { narrative_event = { id = loka_excalibur.602 days = 4 } }
 	}
 }
