@@ -59,6 +59,7 @@ narrative_event = {
 				name = supernatural_events
 				value = off
 			}
+			has_artifact = loka_artifact_excalibur
 			has_global_flag = excalibur_found
 			has_character_flag = excalibur_failed
 			has_character_flag = excalibur_searching
