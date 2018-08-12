@@ -22,7 +22,7 @@ narrative_event = {
 		culture = breton
 			}
 		year = 800
-		has_global_flag = excalibur_found
+		#has_global_flag = excalibur_found
 		any_demesne_province = {
 			region = custom_england
 			culture = saxon
@@ -96,6 +96,60 @@ narrative_event = {
 				name = cultural_unrest
 				duration = 730
 			}
+		}
+	}
+}
+
+# It's spreading
+character_event = {
+	id = loka_culture.2
+	desc = loka_culture.description.2
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	culture = brittonic
+	
+	trigger = {
+		year = 800
+		any_demesne_province = {
+			region = custom_england
+			OR = {
+				culture = saxon
+				culture = breton
+				culture = welsh
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = loka_culture.option.a.2
+		random_demesne_province = {
+			limit = {
+				region = custom_england
+				OR = {	
+					culture = saxon
+					culture = breton
+					culture = welsh
+				}
+			}
+			culture = brittonic
 		}
 	}
 }
