@@ -1,0 +1,4 @@
+marginalised_culture = {
+	local_revolt_risk = 0.05
+	icon = 32
+}
