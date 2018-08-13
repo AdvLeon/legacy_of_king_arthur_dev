@@ -24,8 +24,8 @@ narrative_event = {
 		culture = breton
 			}
 		year = 800
-		#has_artifact = loka_artifact_excalibur
-		#has_global_flag = saxons_accepted
+		has_artifact = loka_artifact_excalibur
+		has_global_flag = saxons_accepted
 		any_demesne_province = {
 			region = custom_england
 			culture = saxon
