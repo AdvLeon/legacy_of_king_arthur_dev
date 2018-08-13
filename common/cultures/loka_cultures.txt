@@ -1,3 +1,11 @@
+#########################################################
+#														#
+# 			LEGACY OF KING ARTHUR NEW CULTURES			#
+#														#
+#########################################################
+
+# Written by - AdvLeon #
+
 # Do not change tags in here without changing every other reference to them.
 # If adding new groups or cultures, make sure they are unique.
 
@@ -13,7 +21,7 @@ celtic = {
 	brittonic = {
 		graphical_cultures = { englishgfx }
 		
-		color = { 0.3 0.8 0.9 }
+		color = { 143 188 143 }
 
 		male_names = {
 			Adda Adgar_Edgar Adran_Adrian Aeddan_Hugh Alan_Alan Aldwr_Aldroenus Algwyn_Alwin Alisander_Alexander Alured_Alfred Alwyn_Alwin Anarawd
