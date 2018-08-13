@@ -176,7 +176,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 100
+		months = 80
 		modifier = {
 			factor = 0.3
 			OR = {
@@ -285,10 +285,10 @@ character_event = {
 	}
 }
 
-#Make my vassal speak Brittonic
+# Make my vassal speak Brittonic #
 character_event = {
 	id = loka_culture.5
-	desc = "loka_culture.description.5"
+	desc = loka_culture.description.5
 	picture = GFX_evt_throne_room
 	
 	only_playable = yes
@@ -449,7 +449,7 @@ character_event = {
 	}
 	
 	option = {
-		name = loka_culture.option.a.7
+		name = loka_culture.option.b.7
 		ai_chance = {
 			factor = 0
 		}
