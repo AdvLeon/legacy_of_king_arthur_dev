@@ -1349,6 +1349,9 @@ narrative_event = {
 	option = {
 		name = loka_excalibur.option.a.17
 		add_artifact = loka_artifact_excalibur
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
 		clr_character_flag = excalibur_searching
 		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
 		hidden_tooltip = { character_event = { id = loka_excalibur.18 days = 4 } }

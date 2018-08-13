@@ -1,0 +1,13 @@
+#########################################################################
+#																		#
+# 			Legacy of King Arthur - Regalia Collection Events			#
+#																		#
+#########################################################################
+
+# Written by AdvLeon #
+
+namespace = loka_regalia
+
+#################### Mantle Events ####################
+
+# Artisans in the Market #
