@@ -43,7 +43,7 @@ decisions = {
 		
 		effect = {
 			wealth = -600
-			narrative_event = { id = 70033 tooltip = "coronation_tooltip" }
+			narrative_event = { id = loka_coronation.1 tooltip = "coronation_tooltip" }
 			hidden_tooltip = { set_character_flag = loka_coronation_plans }
 		}
 		ai_will_do = {
