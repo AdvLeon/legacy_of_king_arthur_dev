@@ -60,7 +60,6 @@ narrative_event = {
 				value = off
 			}
 			has_artifact = loka_artifact_excalibur
-			has_global_flag = excalibur_found
 			has_character_flag = excalibur_failed
 			has_character_flag = excalibur_searching
 		}
@@ -1353,7 +1352,6 @@ narrative_event = {
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-		set_global_flag = excalibur_found
 		clr_character_flag = excalibur_searching
 		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
 		hidden_tooltip = { character_event = { id = loka_excalibur.18 days = 4 } }
@@ -1426,15 +1424,8 @@ narrative_event = {
 	prisoner = no
 	culture_group = celtic
 	ai = no
+	has_artifact = loka_artifact_excalibur
 	
-	trigger = {
-		has_artifact = loka_artifact_excalibur
-		
-		NOR = {
-			has_global_flag = saxons_accepted
-			has_global_flag = saxons_rejected
-		}
-	}
 	mean_time_to_happen = {
 		months = 5
 	}
@@ -1445,7 +1436,6 @@ narrative_event = {
 	}
 	option = {
 		name = loka_excalibur.option.b.20
-		set_global_flag = saxons_rejected
 		capital_scope = {
 			add_province_modifier = {
 				name = marginalised_culture
