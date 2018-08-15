@@ -11,3 +11,7 @@ namespace = loka_regalia
 #################### Mantle Events ####################
 
 # Artisans in the Market #
+
+
+
+#################### Scepter Events ####################
