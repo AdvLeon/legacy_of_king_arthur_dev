@@ -1,0 +1,62 @@
+#########################################################
+#														#
+# 			Legacy of King Arthur - Decisions			#
+#														#
+#########################################################
+
+# Written by - AdvLeon #
+
+decisions = {
+
+	loka_coronation_decision = {
+		only_playable = yes
+		is_high_prio = yes
+		ai = no
+		only_independent = yes
+		
+		potential = {
+			religion = catholic
+			OR = {
+				culture = brittonic
+				culture = breton
+				culture = welsh
+			}
+		}
+		
+		allow = {
+			war = no
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			age = 16
+			wealth = 600
+			OR = {
+				prestige = 1000
+				piety = 1000
+			}
+			AND = {
+				has_artifact = loka_artifact_excalibur
+				has_artifact = loka_artifact_mantle
+				has_artifact = loka_artifact_scepter
+			}
+			culture = brittonic
+		}
+		
+		effect = {
+			wealth = -600
+			narrative_event = { id = 70033 tooltip = "coronation_tooltip" }
+			hidden_tooltip = { set_character_flag = loka_coronation_plans }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						wealth = 1000
+						scaled_wealth = 3.0
+					}
+				}
+			}
+		}
+	}
+}

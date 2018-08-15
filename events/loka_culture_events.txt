@@ -33,7 +33,7 @@ narrative_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1200
+		months = 1000
 		modifier = {
 			factor = 0.75
 			learning = 7
