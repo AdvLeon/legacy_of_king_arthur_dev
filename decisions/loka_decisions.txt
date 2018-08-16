@@ -21,6 +21,10 @@ decisions = {
 				culture = breton
 				culture = welsh
 			}
+			NOT = {
+				title = e_britannia
+				has_character_flag = loka_coronation_plans
+			}
 		}
 		
 		allow = {
@@ -54,6 +58,64 @@ decisions = {
 					OR = {
 						wealth = 1000
 						scaled_wealth = 3.0
+					}
+				}
+			}
+		}
+	}
+	
+	loka_canterbury_decision = {
+		only_playable = yes
+		is_high_prio = yes
+		ai = no
+		only_independent = yes
+		
+		potential = {
+			religion = catholic
+			OR = {
+				culture = brittonic
+				culture = breton
+				culture = welsh
+			}
+			OR = {
+				has_landed_title = k_england
+				has_landed_title = k_wales
+			}
+		}
+		
+		allow = {
+			religion = catholic
+			OR = {
+				culture = brittonic
+				culture = breton
+				culture = welsh
+			}
+			has_landed_title = b_canterbury
+			piety = 500
+			wealth = 500
+		}
+		
+		effect = {
+			wealth = -500
+			activate_title = { title = d_arch_canterbury status = yes }
+			
+			hidden_tooltip = {
+				create_random_priest = {
+					dynasty = none
+					random_traits = yes
+				}
+				new_character = {
+					b_canterbury = {
+						grant_title = PREV
+					}
+					d_arch_canterbury = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+					wealth = 500
+					opinion = {
+						who = ROOT
+						modifier = opinion_creator_of_rel_heal
 					}
 				}
 			}

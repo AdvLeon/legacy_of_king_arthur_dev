@@ -15,8 +15,8 @@ narrative_event = {
 	id = loka_coronation.1
 	title = loka_coronation.title.1
 	desc = loka_coronation.desc.1
-	picture = 
-	border = 
+	picture = GFX_evt_courier
+	border = GFX_event_narrative_frame_intrigue
 	
 	is_triggered_only = yes
 	
@@ -40,8 +40,8 @@ character_event = {
 	id = loka_coronation.2
 	title = loka_coronation.title.2
 	desc = loka_coronation.desc.2
-	picture = 
-	border =
+	picture = GFX_evt_courier
+	border = GFX_event_narrative_frame_intrigue
 	
 	is_triggered_only = yes
 	
