@@ -43,6 +43,12 @@ decisions = {
 				has_artifact = loka_artifact_scepter
 			}
 			culture = brittonic
+			custom_tooltip = {
+				text = coronation_custom_tooltip
+				hidden_tooltip = {
+					has_global_flag = archbishop_installed
+				}
+			}
 		}
 		
 		effect = {
@@ -81,6 +87,9 @@ decisions = {
 				has_landed_title = k_england
 				has_landed_title = k_wales
 			}
+			NOT = {
+				has_global_flag = archbishop_installed
+			}
 		}
 		
 		allow = {
@@ -98,6 +107,8 @@ decisions = {
 		effect = {
 			wealth = -500
 			activate_title = { title = d_arch_canterbury status = yes }
+			
+			set_global_flag = archbishop_installed
 			
 			hidden_tooltip = {
 				create_random_priest = {

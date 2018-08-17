@@ -80,6 +80,7 @@ narrative_event = {
 	option = {
 		name = loka_culture.option.a.1
 		culture = brittonic
+		hidden_tooltip = { narrative_event = { id = loka_culture.14 days = 100} }
 		random_demesne_province = {
 			limit = {
 				region = custom_england
@@ -159,8 +160,8 @@ character_event = {
 # Teach my child Brittonic #
 character_event = {
 	id = loka_culture.3
-	desc = loka_culture.description.3
-	picture = GFX_evt_child_playing
+	
+	hide_window = yes
 	
 	only_rulers = yes
 	culture = brittonic
@@ -193,7 +194,6 @@ character_event = {
 	}
 	
 	option = {
-		name = loka_culture.option.a.3
 		immediate = {
 			random_child = {
 				limit = {
@@ -203,24 +203,53 @@ character_event = {
 						culture = breton
 					}
 				}
-				culture = brittonic
 				hidden_tooltip = {
-					character_event = { id = loka_culture.6 days = 3 }
+					character_event = { id = loka_culture.4 }
 				}
 			}
 		}
 	}
+}
+
+character_event = {
+	id = loka_culture.4
+	
+	hide_window = yes
+	is_triggered_only = yes
 	
 	option = {
-		name = loka_culture.option.b.3
+		immediate = {
+			FROM = { 
+				character_event = { id = loka_culture.5 } 
+			}
+		}
 	}
 }
 
+character_event = {
+	id = loka_culture.5
+	desc = loka_culture.desc.5
+	picture = GFX_evt_child_playing
+	
+	is_triggered_only = yes
+
+	option = {
+		name = loka_culture.option.a.5
+		FROM = {
+			culture = brittonic
+		}
+	}
+	option = {
+		name = loka_culture.opinion.b.5
+	}
+}
+
+
 # Make my court speak Brittonic #
 character_event = {
-	id = loka_culture.4
-	desc = loka_culture.description.4
-	picture = GFX_evt_throne_room
+	id = loka_culture.6
+	
+	hide_window = yes
 	
 	only_rulers = yes
 	culture = brittonic
@@ -262,7 +291,6 @@ character_event = {
 	}
 
 	option = {
-		name = loka_culture.option.a.4
 		immediate = {
 			random_courtier = {
 				limit = {
@@ -272,24 +300,53 @@ character_event = {
 						culture = breton
 					}
 				}
-				culture = brittonic
 				hidden_tooltip = {
-					character_event = { id = loka_culture.6 days = 3 }
+					character_event = { id = loka_culture.7 }
 				}
 			}
 		}
 	}
+}
+
+character_event = {
+	id = loka_culture.7
+	
+	hide_window = yes
+	is_triggered_only = yes
 	
 	option = {
-		name = loka_culture.option.b.4
+		immediate = {
+			FROM = { 
+				character_event = { id = loka_culture.8 } 
+			}
+		}
 	}
 }
 
+character_event = {
+	id = loka_culture.8
+	desc = loka_culture.desc.8
+	picture = GFX_evt_throne_room
+	
+	is_triggered_only = yes
+
+	option = {
+		name = loka_culture.option.a.8
+		FROM = {
+			culture = brittonic
+		}
+	}
+	option = {
+		name = loka_culture.opinion.b.8
+	}
+}
+
+
 # Make my vassal speak Brittonic #
 character_event = {
-	id = loka_culture.5
-	desc = loka_culture.description.5
-	picture = GFX_evt_throne_room
+	id = loka_culture.9
+	
+	hide_window = yes
 	
 	only_playable = yes
 	culture = brittonic
@@ -330,43 +387,56 @@ character_event = {
 	}
 
 	option = {
-		name = loka_culture.option.a.5
 		random_vassal = {
 			limit = {
 				OR = {	
 					culture = saxon
 				}
 			}
-			culture = brittonic
 			hidden_tooltip = {
-				character_event = { id = loka_culture.6 days = 3 }
+				character_event = { id = loka_culture.10 }
 			}
 		}
 	}
+}
+
+character_event = {
+	id = loka_culture.10
+	
+	hide_window = yes
+	is_triggered_only = yes
 	
 	option = {
-		name = loka_culture.option.b.5
+		immediate = {
+			FROM = { 
+				character_event = { id = loka_culture.11 } 
+			}
+		}
 	}
 }
 
-# Asked to adopt Brittonic language #
 character_event = {
-	id = loka_culture.6
-	desc = loka_culture.description.6
+	id = loka_culture.11
+	desc = loka_culture.desc.11
 	picture = GFX_evt_throne_room
-
+	
 	is_triggered_only = yes
 
 	option = {
-		name = loka_culture.option.a.6
-		culture = brittonic
+		name = loka_culture.option.a.11
+		FROM = {
+			culture = brittonic
+		}
+	}
+	option = {
+		name = loka_culture.opinion.b.11
 	}
 }
 
 # A ruler is assimilated by the local Brittonic culture #
 character_event = {
-	id = loka_culture.7
-	desc = loka_culture.description.7
+	id = loka_culture.12
+	desc = loka_culture.description.12
 	picture = GFX_evt_stone_church
 	
 	only_rulers = yes
@@ -427,7 +497,7 @@ character_event = {
 	}
 
 	option = {
-		name = loka_culture.option.a.7
+		name = loka_culture.option.a.12
 		
 		# Piss off the appropriate vassals
 		any_vassal = {
@@ -440,7 +510,7 @@ character_event = {
 				modifier = opinion_adopted_foreign_ways
 				years = 10
 			}
-			hidden_tooltip = { character_event = { id = loka_culture.8 days = 0 } }
+			hidden_tooltip = { character_event = { id = loka_culture.13 days = 0 } }
 		}
 		
 		capital_scope = {
@@ -449,7 +519,7 @@ character_event = {
 	}
 	
 	option = {
-		name = loka_culture.option.b.7
+		name = loka_culture.option.b.12
 		ai_chance = {
 			factor = 0
 		}
@@ -458,14 +528,14 @@ character_event = {
 
 # Adopted foreign ways scandal #
 character_event = {
-	id = loka_culture.8
-	desc = loka_culture.description.8
+	id = loka_culture.13
+	desc = loka_culture.description.13
 	picture = GFX_evt_scandal
 
 	is_triggered_only = yes
 
 	option = {
-		name = loka_culture.option.a.8
+		name = loka_culture.option.a.13
 		tooltip = {
 			opinion = {
 				who = FROM
@@ -473,5 +543,62 @@ character_event = {
 				years = 10
 			}
 		}
+	}
+}
+
+#### Mantle Events ####
+
+# Artisans Arrive #
+narrative_event = {
+	id = loka_culture.14
+	title = loka_culture.title.14
+	desc = loka_culture.description.14
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = loka_culture.option.a.14
+		hidden_tooltip = { 
+			narrative_event = { id = loka_culture.15 days = 2 }
+		}
+	}
+}
+
+# Artisans offer #
+narrative_event = {
+	id = loka_culture.15
+	title = loka_culture.title.15
+	desc = loka_culture.description.15
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = loka_culture.option.a.15
+		wealth = -500
+		capital_scope = {
+			add_province_modifier = {
+				name = artisans_guild
+				duration = 7300
+			}
+		}
+		add_artifact = loka_artifact_mantle
+	}
+	option = {
+		name = loka_culture.option.b.15
+		tooltip_info = stewardship
+		trigger = {
+			stewardship = 15
+			}
+		wealth = -1000
+		capital_scope = {
+			add_province_modifier = {
+				name = artisans_guild
+				duration = 7300
+			}
+		}
+		add_artifact = loka_artifact_mantle
+	}
+	option = {
+		name = loka_culture.option.c.15
 	}
 }

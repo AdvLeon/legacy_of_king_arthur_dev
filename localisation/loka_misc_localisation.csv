@@ -13,3 +13,25 @@ brittonic;Brittonic;;;;;;;;;;;;;x
 d_arch_canterbury;Archbishopric of Canterbury;;;;;;;;;;;;;x
 d_arch_canterbury_adj;Canterburian;;;;;;;;;;;;;x
 ARCHBISHOP;Archbishop;;;;;;;;;;;;;x
+
+baron_saxon;Thane;Thane;Thane;;Thane;;;;;;;;;x
+baron_female_saxon;Lady;Lady;Lady;;Lady;;;;;;;;;x
+barony_of_saxon;Thanedom of;Thanedom de;Thanedom von;;Thanedom de;;;;;;;;;x
+
+count_saxon;Earl;Earl;Earl;;Earl;;;;;;;;;x
+count_female_saxon;Earlina;Lady;Lady;;Lady;;;;;;;;;x
+county_of_saxon;Earldom of;Earldom de;Earldom von;;Earldom de;;;;;;;;;x
+
+duke_saxon;Great Earl;Great Earl;Great Earl;;Great Earl;;;;;;;;;x
+duke_female_saxon;Earlina;Lady;Lady;;Lady;;;;;;;;;x
+duchy_of_saxon;Great Earldom of;Great Earldom de;Great Earldom von;;Great Earldom de;;;;;;;;;x
+
+emperor_welsh;High King;High King;High King;;High King;;;;;;;;;x
+emperor_female_welsh;High Queen;High Queen;High Queen;;High Queen;;;;;;;;;x
+empire_of_welsh;High Kingdom of;High Kingdom de;High Kingdom von;;High Kingdom de;;;;;;;;;x
+
+emperor_brittonic;High King;High King;High King;;High King;;;;;;;;;x
+emperor_female_brittonic;High Queen;High Queen;High Queen;;High Queen;;;;;;;;;x
+empire_of_brittonic;High Kingdom of;High Kingdom de;High Kingdom von;;High Kingdom de;;;;;;;;;x
+
+coronation_custom_tooltip;Must have installed the Archbishop of Canterbury;;;;;;;;;;;;;x
