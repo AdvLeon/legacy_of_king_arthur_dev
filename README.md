@@ -23,3 +23,4 @@ Planned features:
 - Rebuilding Camelot event.
 - Brittonic coronation event for forming the Empire level title.
 - Utilising bloodline mechanics coming in Holy Fury DLC. (Holy Fury has no release day set so this might be a while)
+- Martial focused Round Table society for the most honourable warriors of Britannia
