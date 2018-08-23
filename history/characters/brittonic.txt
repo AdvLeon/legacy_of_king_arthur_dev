@@ -1,0 +1,112 @@
+444441 = {
+	name="Constantine III"
+	dynasty=44444
+	religion="catholic"
+	culture="roman"
+	random_traits = yes
+	367.1.1={
+		birth=yes
+	}
+	411.1.1={
+		death=yes
+	}
+}
+
+444442 = {
+	name="Constans II"
+	dynasty=44444
+	religion="catholic"
+	culture="brittonic"
+	random_traits = yes
+	father=444441
+	390.1.1={
+		birth=yes
+	}
+	412.2.1={
+		death=yes
+	}
+}
+
+444443 = {
+	name="Aurelius"
+	dynasty=44444
+	religion="catholic"
+	culture="brittonic"
+	random_traits = yes
+	father=444441
+	396.1.1={
+		birth=yes
+	}
+	417.1.1={
+		death=yes
+	}
+}
+
+444444 = {
+	name="Uther"
+	dynasty=44444
+	religion="catholic"
+	culture="brittonic"
+	trait="lustful"
+	trait="brave"
+	trait="strong"
+	trait="brilliant_strategist"
+	father=444441
+	400.1.1={
+		birth=yes
+	}
+	463.1.1={
+		death=yes
+	}
+}
+
+444445 = {
+	name="Arthur"
+	dynasty=44444
+	religion="catholic"
+	culture="brittonic"
+	trait="just"
+	trait="brave"
+	trait="genius"
+	trait="strong"
+	trait="honest"
+	trait="diligent"
+	trait="kind"
+	trait="brilliant_strategist"
+	father=444444
+	453.1.1={
+		birth=yes
+	}
+	512.1.1={
+		death=yes
+	}
+}
+
+444446 = {
+	name="Anna"
+	female = yes
+	dynasty=44444
+	religion="catholic"
+	culture="brittonic"
+	random_traits = yes
+	father=444444
+	454.1.1={
+		birth=yes
+	}
+	522.1.1={
+		death=yes
+	}
+}
+
+444447 = {
+	name="Vortigern"
+	religion="catholic"
+	culture="brittonic"
+	random_traits = yes
+	380.1.1={
+		birth=yes
+	}
+	420.1.1={
+		death=yes
+	}
+}

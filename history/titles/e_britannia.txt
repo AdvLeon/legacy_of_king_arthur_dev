@@ -1,0 +1,21 @@
+367.1.1={
+	holder=444441 # Constantine III
+}
+411.1.1={
+	holder=444442 # Constans II
+}
+412.1.1={
+	holder=444447 # Vortigern
+}
+416.1.1={
+	holder=444443 # Aurelius
+}
+417.1.1={
+	holder=444444 # Uther
+}
+463.1.1={
+	holder=444445 # Arthur
+}
+512.1.1={
+	holder=0
+}

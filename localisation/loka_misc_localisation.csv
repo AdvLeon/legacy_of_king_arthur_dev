@@ -14,6 +14,8 @@ d_arch_canterbury;Archbishopric of Canterbury;;;;;;;;;;;;;x
 d_arch_canterbury_adj;Canterburian;;;;;;;;;;;;;x
 ARCHBISHOP;Archbishop;;;;;;;;;;;;;x
 
+e_isles;the British Isles;;;;;;;;;;;;;x
+
 baron_saxon;Thane;Thane;Thane;;Thane;;;;;;;;;x
 baron_female_saxon;Lady;Lady;Lady;;Lady;;;;;;;;;x
 barony_of_saxon;Thanedom of;Thanedom de;Thanedom von;;Thanedom de;;;;;;;;;x

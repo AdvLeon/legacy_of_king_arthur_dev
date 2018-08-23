@@ -212,11 +212,25 @@ narrative_event = {
 			limit = { has_nickname = no }
 			give_nickname = nick_the_great
 		}
+		activate_title = { title = e_isles status = yes }
 		primary_title = {
-			e_britannia = {
+			e_isles = {
 				grant_title = ROOT
 				copy_title_laws = PREV
+
 			}
+		}
+		k_england = {
+			de_jure_liege = e_isles
+		}
+		k_wales = {
+			de_jure_liege = e_isles
+		}
+		k_ireland = {
+			de_jure_liege = e_isles
+		}
+		k_scotland = {
+			de_jure_liege = e_isles
 		}
 		add_artifact = loka_artifact_crown
 	}

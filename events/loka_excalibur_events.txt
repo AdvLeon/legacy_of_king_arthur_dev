@@ -1,8 +1,10 @@
-#####################################################
-#													#
-# 			ADVLEON'S EXCALIBUR EVENTS				#
-#													#
-#####################################################
+#########################################################
+#														#
+#		Legacy of King Arthur - Excalibur Events		#
+#														#
+#########################################################
+
+# Written by - AdvLeon
 
 namespace = loka_excalibur
 
@@ -22,7 +24,6 @@ narrative_event = {
 	religion_group = christian
 	prisoner = no
 	culture_group = celtic
-	year = 800
 	ai = no
 	
 	trigger = { 
