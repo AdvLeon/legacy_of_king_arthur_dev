@@ -1,3 +1,18 @@
+e_isles = {
+	color={ 172 22 22 }
+	color2={ 255 255 255 }
+	
+	capital = 32 # Middlesex
+	
+	#title = "ISLES"
+	#foa = "ISLES_FOA"
+	short_name = no
+			
+	allow = {
+		always = no # Only created through special event
+	}
+}
+
 e_britannia = {
 	color={ 172 22 22 }
 	color2={ 255 255 255 }
