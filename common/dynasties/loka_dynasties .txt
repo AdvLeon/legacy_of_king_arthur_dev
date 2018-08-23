@@ -1,3 +1,17 @@
+44444=
+{
+	name="Pendragon"
+	culture="brittonic"
+	religion="catholic"
+	coat_of_arms=
+	{
+		data=
+		{
+0 8 0 0 0 0 0 			}
+		religion="catholic"
+	}
+}
+
 99914250=
 {
 	name="Ceredigion"

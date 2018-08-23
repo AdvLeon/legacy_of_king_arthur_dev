@@ -1,8 +1,10 @@
-#####################################################
-#													#
-# 			ADVLEON'S EXCALIBUR EVENTS				#
-#													#
-#####################################################
+#########################################################
+#														#
+#		Legacy of King Arthur - Excalibur Events		#
+#														#
+#########################################################
+
+# Written by - AdvLeon
 
 namespace = loka_excalibur
 
@@ -22,7 +24,6 @@ narrative_event = {
 	religion_group = christian
 	prisoner = no
 	culture_group = celtic
-	year = 800
 	ai = no
 	
 	trigger = { 
@@ -1349,6 +1350,9 @@ narrative_event = {
 	option = {
 		name = loka_excalibur.option.a.17
 		add_artifact = loka_artifact_excalibur
+		new_artifact = {
+			set_creation_date = 1.1.1
+		}
 		clr_character_flag = excalibur_searching
 		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
 		hidden_tooltip = { character_event = { id = loka_excalibur.18 days = 4 } }
@@ -1421,7 +1425,14 @@ narrative_event = {
 	prisoner = no
 	culture_group = celtic
 	ai = no
-	has_artifact = loka_artifact_excalibur
+	
+	trigger = {
+		has_artifact = loka_artifact_excalibur
+		NOR = {
+			has_global_flag = saxons_accepted
+			has_global_flag = saxons_rejected
+		}
+	}
 	
 	mean_time_to_happen = {
 		months = 5
@@ -1433,6 +1444,7 @@ narrative_event = {
 	}
 	option = {
 		name = loka_excalibur.option.b.20
+		set_global_flag = saxons_rejected
 		capital_scope = {
 			add_province_modifier = {
 				name = marginalised_culture
