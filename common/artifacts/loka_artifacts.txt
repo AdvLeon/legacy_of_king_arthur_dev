@@ -37,33 +37,3 @@ loka_artifact_excalibur = {
 			}
 	}
 }
-
-# The Mantle of the Isles - Concordia #
-loka_artifact_mantle = {
-	picture = GFX_blessed_mantle
-	slot = ceremonial_torso
-	quality = 5
-	stacking = no
-	
-	monthly_character_prestige = 2
-}
-
-# The Scepter of the Isles - Lex #
-loka_artifact_scepter = {
-	picture = GFX_sceptre_ruby
-	slot = scepter
-	quality = 5
-	stacking = no
-	
-	monthly_character_prestige = 2
-}
-
-# The Crown of the Isles - Divinus #
-loka_artifact_crown = {
-	picture = GFX_crown_gold_fancy
-	slot = crown
-	quality = 5
-	stacking = no
-	
-	monthly_character_prestige = 2
-}
