@@ -10,8 +10,8 @@
 loka_artifact_excalibur = {
 	quality = 5
 	stacking = no
-	picture = GFX_sword_of_heroes
-	slot = ceremonial_weapon
+	picture = GFX_sword_engraved
+	slot = weapon
 
 	monthly_character_prestige = 2
 	monthly_character_piety = 1
@@ -30,6 +30,9 @@ loka_artifact_excalibur = {
 		OR = {	trait = kind
 				trait = just
 				trait = brave
+			}
+		NOR = { trait = impaler
+				trait = cruel				
 			}
 		OR = {	primary_title = { title = k_england }
 				primary_title = { title = k_wales }
