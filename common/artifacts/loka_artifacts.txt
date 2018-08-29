@@ -10,8 +10,8 @@
 loka_artifact_excalibur = {
 	quality = 5
 	stacking = no
-	picture = GFX_sword_of_heroes
-	slot = ceremonial_weapon
+	picture = GFX_sword_engraved
+	slot = weapon
 
 	monthly_character_prestige = 2
 	monthly_character_piety = 1
@@ -31,39 +31,12 @@ loka_artifact_excalibur = {
 				trait = just
 				trait = brave
 			}
+		NOR = { trait = impaler
+				trait = cruel				
+			}
 		OR = {	primary_title = { title = k_england }
 				primary_title = { title = k_wales }
 				primary_title = { title = e_britannia }
 			}
 	}
-}
-
-# The Mantle of the Isles - Concordia #
-loka_artifact_mantle = {
-	picture = GFX_blessed_mantle
-	slot = ceremonial_torso
-	quality = 5
-	stacking = no
-	
-	monthly_character_prestige = 2
-}
-
-# The Scepter of the Isles - Lex #
-loka_artifact_scepter = {
-	picture = GFX_sceptre_ruby
-	slot = scepter
-	quality = 5
-	stacking = no
-	
-	monthly_character_prestige = 2
-}
-
-# The Crown of the Isles - Divinus #
-loka_artifact_crown = {
-	picture = GFX_crown_gold_fancy
-	slot = crown
-	quality = 5
-	stacking = no
-	
-	monthly_character_prestige = 2
 }

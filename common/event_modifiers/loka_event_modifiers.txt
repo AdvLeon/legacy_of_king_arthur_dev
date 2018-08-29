@@ -12,3 +12,8 @@ artisans_guild = {
 	local_build_time_modifier = -0.2
 	icon = 4
 }
+dedicated_steward = {
+	local_tax_modifier = 0.05
+	stewardship = 3
+	icon = 6
+}

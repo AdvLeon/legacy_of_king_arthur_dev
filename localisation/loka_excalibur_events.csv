@@ -1,14 +1,16 @@
-#####################################################
-#													#
-# 			ADVLEON'S EXCALIBUR EVENTS				#
-#													#
-#####################################################
+#################################################################
+#																#
+#			Legend of King Arthur - Excalibur Events			#
+#																#
+#################################################################
+
+# Written by - Spykadelic
 
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 
 #### Miscellaneous ####
 
-marginalised_culture;Marginalised Saxon Populace;;;;;;;;;;;;;x
+dedicated_steward;Dedicated Steward;;;;;;;;;;;;;x
 
 
 #### Event 1 - Message about the Lady of the Lake ####
@@ -16,7 +18,7 @@ marginalised_culture;Marginalised Saxon Populace;;;;;;;;;;;;;x
 loka_excalibur.title.1;The Tale of the Lady;;;;;;;;;;;;;x
 
 loka_excalibur.description.1;While feasting in your hold one night, you are approached by an old priest. His robes are worn & muddied from travel, his hair wild & eyes gaunt. When he speaks you hear a tremor in his voice.
-"My King, I have travelled far, across hard roads to find you. Whilst deep in prayer one night I was blessed with a vision. I found myself wandering the edge of a lake, where, I do not know. I could see a ruined watchtower in the distance atop a mighty hill. It was then that, from the lake, emerged the Lady, beautiful yet terrifying. I fell to my knees in her presence. In her hands she held a sword, as I gazed upon it a name filled my mind, yours. The Lady is waiting for you, all you need do is find her.";;;;;;;;;;;;;x
+"My [This.GetTitle], I have travelled far, across hard roads to find you. Whilst deep in prayer one night I was blessed with a vision. I found myself wandering the edge of a lake, where, I do not know. I could see a ruined watchtower in the distance atop a mighty hill. It was then that, from the lake, emerged the Lady, beautiful yet terrifying. I fell to my knees in her presence. In her hands she held a sword, as I gazed upon it a name filled my mind, yours. The Lady is waiting for you, all you need do is find her.";;;;;;;;;;;;;x
 
 loka_excalibur.option.a.1;I trust in his conviction, I will search for The Lady!;;;;;;;;;;;;;x
 
@@ -100,7 +102,7 @@ loka_excalibur.option.a.601;A mesmerising display...;;;;;;;;;;;;;x
 
 #### Event 6 - Find the Lady Pt2 ####
 
-loka_excalibur.title.602;The Lady's Judgement;;;;;;;;;;;;;x
+loka_excalibur.title.602;The Lady of the Lake;;;;;;;;;;;;;x
 
 loka_excalibur.description.602;At its crescendo the music stops as suddenly as it started. The mist parting to reveal her, the Lady, exactly as the Priest described. She walks slowly towards you, her footfalls not disturbing the stillness of the water. Her flowing white gown and long, golden hair cling to her form. When she speaks, her voice is firm, but kind.
 "You have travelled far and witnessed much [This.GetFirstName], your journey has reached its end. Whether you leave with the reward you desire hinges on my judgement. You will not be able to hide your true self from me. Are you ready to begin?";;;;;;;;;;;;;x
@@ -112,35 +114,46 @@ loka_excalibur.tooltip.a.602;The Lady begins to judge your nature...;;;;;;;;;;;;
 
 #### Event 16 - The Verdict ####
 
-loka_excalibur.title.16;TITLE;;;;;;;;;;;;;x
+loka_excalibur.title.16;The Lady's Judgement;;;;;;;;;;;;;x
 
-loka_excalibur.description.a.16;DESCRIPTION_A;;;;;;;;;;;;;x
+loka_excalibur.description.a.16;A blinding white light begins to emanate from the Lady, closing your eyes provides no respite as it pierces the darkness. Your mind races as moments from your life flash before your eyes, all the good, and the bad. Your mind awash with emotion you fall to your knees. The Lady was true to her word, you cannot hide from her judgement.
+As the light recedes, you feel a warmth grow from within you, the aches and pains of your travels fading away. Scars you have had since your youth vanish in the wake of the Lady’s grace. As you gently open your eyes, you see it. Excalibur, the fabled blade, glinting serenely in the moonlight. The hilt is adorned by exquisitely etched dragon motifs, the blade, clean of any imperfections thrums with power.;;;;;;;;;;;;;x
 
-loka_excalibur.description.b.16;DESCRIPTION_B;;;;;;;;;;;;;x
+loka_excalibur.description.b.16;A blinding white light begins to emanate from the Lady, closing your eyes provides no respite as it pierces the darkness. Your mind races as moments from your life flash before your eyes, all the good, and the bad. Your mind awash with emotion you fall to your knees. The Lady was true to her word, you cannot hide from her judgement.
+With a jolt you find yourself lying face down in the grass on the edge of the water. The silence is deafening, no birds, no bugs, not even a breeze disturbs the clearing. As you drag yourself to your feet, you realise you are alone, the Lady has gone. A sinking feeling wells up inside you as you realise what that means. You have been found unworthy, your journey has been for naught.;;;;;;;;;;;;;x
 
-loka_excalibur.option.a.16;OPTION_A;;;;;;;;;;;;;x
+loka_excalibur.option.a.16;I shall strive to remain a worthy wielder of this blade.;;;;;;;;;;;;;x
 
-loka_excalibur.option.b.16;OPTION_B;;;;;;;;;;;;;x
+loka_excalibur.option.b.16;What did I do wrong?;;;;;;;;;;;;;x
 
 
 #### Event 17 - Excalibur ####
 
-loka_excalibur.title.17;TITLE;;;;;;;;;;;;;x
+loka_excalibur.title.17;Taking up the Sword;;;;;;;;;;;;;x
 
-loka_excalibur.description.17;DESCRIPTION;;;;;;;;;;;;;x
+loka_excalibur.description.17;The sword hangs in the air in front of you, its blade embellished with beautiful patterns interlaced with magically glowing runes, casting the designs into sharp relief. The immaculately stitched leather, wrapped tightly around the handle, bore its own patterns and a large gemstone is clasped in the clawed pommel.
+It is calling to you, it wants you to wield it. As your hand closes around the grip you feel an energy course through you. The hair on your arm stands on end and a wave of warmth washes over you, it feels right. You give the sword a few swings, feeling the perfect balance with every motion, you feel completely at one with the weapon.;;;;;;;;;;;;;x
 
-loka_excalibur.option.a.17;OPTION_A;;;;;;;;;;;;;x
+loka_excalibur.option.a.17;A sword worthy of its legend.;;;;;;;;;;;;;x
 
 
 #### Event 18 - Positive Pondering ####
 
-loka_excalibur.description.18;DESCRIPTION;;;;;;;;;;;;;x
+loka_excalibur.title.18;A Triumphant Return;;;;;;;;;;;;;x
 
-loka_excalibur.option.a.18;OPTION_A;;;;;;;;;;;;;x
+loka_excalibur.description.18;The ride back to your holdings has been a pleasant one, the weather calm, the roads clear and Excalibur, despite its size, resting lightly on your hip. Since first picking up the blade you have felt reinvigorated, your mind flush with ideas and your body healing remarkably from any injury.
+You are recognised almost as soon as you return to your lands, the people breaking out in cheers as they see the prize you weild. You even take the time to stop at a few taverns to share the story of how you claimed the famed blade. At your keep you are given a hero’s welcome, attended by all your courtiers, the celebrations continue long into the night.;;;;;;;;;;;;;x
+
+loka_excalibur.option.a.18;All hail the true King of Britons!;;;;;;;;;;;;;x
 
 
 #### Event 19 - Negative Pondering ####
 
-loka_excalibur.description.019;DESCRIPTION;;;;;;;;;;;;;x
+loka_excalibur.title.19;The Long Road Home;;;;;;;;;;;;;x
 
-loka_excalibur.option.a.19;OPTION_A;;;;;;;;;;;;;x
+loka_excalibur.description.19;Riding back to your holdings you find yourself reflecting on the decisions that led you here. 'What could I have done differently?', 'Was I a fool to think I could ever have been worthy?', these thoughts circle around and around in your head. An air of melancholy surrounds you as you begin to see the familiar sights of home. 
+At a feast that night to honour your return, you cut a forlorn figure. A number of friends and advisors attempt to comfort you, all unsuccessfully. For many days you wander listlessly around the grounds, your mind still in that far off clearing. Eventually this feeling begins to pass, while you yourself are not worthy perhaps, one day, another will be.;;;;;;;;;;;;;x
+
+loka_excalibur.option.a.19;I am not worthy of the sword, but I will be worthy of my title.;;;;;;;;;;;;;x
+
+loka_excalibur.tooltip.a.19;Perhaps future generations will be worthy in the Lady's eyes, I shall focus my efforts on improving the realm.;;;;;;;;;;;;;x

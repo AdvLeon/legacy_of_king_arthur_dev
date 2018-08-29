@@ -1333,7 +1333,7 @@ narrative_event = {
 	option = {
 		trigger = { NOT = { check_variable = { which = lady_score value = 4 } } }
 		name = loka_excalibur.option.b.16
-		hidden_tooltip = { character_event = { id = loka_excalibur.18 days = 5 } }
+		hidden_tooltip = { narrative_event = { id = loka_excalibur.18 days = 5 } }
 	}
 }
 
@@ -1355,18 +1355,19 @@ narrative_event = {
 		}
 		clr_character_flag = excalibur_searching
 		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
-		hidden_tooltip = { character_event = { id = loka_excalibur.18 days = 4 } }
+		hidden_tooltip = { narrative_event = { id = loka_excalibur.18 days = 4 } }
 	}
 }
 
 ################ HEADING HOME ###################
 
 # Positive Pondering #
-character_event = {
+narrative_event = {
 	id = loka_excalibur.18
+	title = loka_excalibur.title.18
 	desc = loka_excalibur.description.18
-	picture = GFX_evt_idyllic_fishing
-	border = GFX_event_normal_frame_economy
+	picture = GFX_evt_fishing
+	border = GFX_event_narrative_frame_economy
 	
 	is_triggered_only = yes
 
@@ -1381,11 +1382,12 @@ character_event = {
 }
 
 # Negative Pondering #
-character_event = {
+narrative_event = {
 	id = loka_excalibur.19
+	title = loka_excalibur.title.19
 	desc = loka_excalibur.description.19
 	picture = GFX_evt_bad_news
-	border = GFX_event_normal_frame_war
+	border = GFX_event_narrative_frame_war
 	
 	is_triggered_only = yes
 
@@ -1396,111 +1398,10 @@ character_event = {
 		set_character_flag = bad_pilgrimage
 		clr_character_flag = abominable_pilgrimage
 		hidden_tooltip = { character_event = { id = SoA.5090 days = 5 } }
-			random = {
-				chance = 30
-				add_trait = depressed
-				hidden_tooltip = {
-					character_event = {
-						id = 38288 } # Notify Depressed
-					}
-				}
-			}
-	}
-	
-################ THE SPEECH ###################
-
-# The Speech pt1 #
-narrative_event = {
-	id = loka_excalibur.20
-	title = loka_excalibur.title.20
-	desc = loka_excalibur.description.20
-	picture = GFX_evt_whispers
-	border = GFX_event_narrative_frame_intrigue
-	
-	min_age = 16
-	only_playable = yes
-	only_capable = yes
-	only_rulers = yes
-	religion_group = christian
-	prisoner = no
-	culture_group = celtic
-	ai = no
-	
-	trigger = {
-		has_artifact = loka_artifact_excalibur
-		NOR = {
-			has_global_flag = saxons_accepted
-			has_global_flag = saxons_rejected
+		custom_tooltip = { text = loka_excalibur.tooltip.a.19 }
+		add_character_modifier = {
+			name = dedicated_steward
+			duration = 3650
 		}
-	}
-	
-	mean_time_to_happen = {
-		months = 5
-	}
-	
-	option = {
-		name = loka_excalibur.option.a.20
-		hidden_tooltip = { narrative_event = { id = loka_excalibur.21 days = 4 } }
-	}
-	option = {
-		name = loka_excalibur.option.b.20
-		set_global_flag = saxons_rejected
-		capital_scope = {
-			add_province_modifier = {
-				name = marginalised_culture
-				duration = 1825
-			}
-		}
-		random_demesne_province = {
-			limit = {
-				region = custom_england	
-				culture = saxon
-				}
-			add_province_modifier = {
-				name = marginalised_culture
-				duration = 1825
-			}
-		}
-		job_spymaster = {
-			opinion = {
-				modifier = opinion_disappointed
-				who = ROOT
-				years = 3
-			}
-		}
-	}
-}
-
-# The Speech pt2 #
-narrative_event = {
-	id = loka_excalibur.21
-	title = loka_excalibur.title.21
-	desc = loka_excalibur.description.21
-	picture = GFX_evt_powerful_tower
-	border = GFX_event_narrative_frame_economy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = loka_excalibur.option.a.21
-		idden_tooltip = { narrative_event = { id = loka_excalibur.22 days = 1 } }
-	}
-}
-
-# The Speech pt3 #
-narrative_event = {
-	id = loka_excalibur.22
-	title = loka_excalibur.title.22
-	desc = loka_excalibur.description.22
-	picture = GFX_evt_prospering_province
-	border = GFX_event_narrative_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = loka_excalibur.option.a.22
-		prestige = 200
-		piety = 200
-		set_global_flag = saxons_accepted
 	}
 }
