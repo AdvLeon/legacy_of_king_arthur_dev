@@ -65,11 +65,10 @@ narrative_event = {
 			has_character_flag = excalibur_searching
 		}
 		is_inaccessible_trigger = no
-		immortal = no
 	}
 	
 	mean_time_to_happen = {
-		months = 3000
+		months = 3650
 		modifier = {		#Virtues
 			factor = 0.1
 			trait = brave
