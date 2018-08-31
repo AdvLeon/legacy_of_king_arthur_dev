@@ -1327,6 +1327,39 @@ narrative_event = {
 		trigger = { check_variable = { which = lady_score value = 4 } }
 		name = loka_excalibur.option.a.16
 		hidden_tooltip = { narrative_event = { id = loka_excalibur.17 days = 5 } }
+		if = {
+			limit = { trait = scarred }
+			remove_trait = scarred
+		}
+		if = {
+			limit = { trait = disfigured }
+			remove_trait = disfigured
+		}
+		if = {
+			limit = { trait = wounded }
+			remove_trait = wounded
+		}
+		if = {
+			limit = { trait = maimed }
+			remove_trait = maimed
+		}
+		if = {
+			limit = { trait = one_eyed }
+			remove_trait = one_eyed
+		}
+		if = {
+			limit = { trait = one_handed }
+			remove_trait = one_handed
+		}
+		if = {
+			limit = { trait = one_legged }
+			remove_trait = one_legged
+		}
+		if = {
+			limit = { trait = scarred }
+			remove_trait = scarred
+		}
+		remove_disease_trait_effect = yes
 	}
 	#You are not worthy
 	option = {
@@ -1353,7 +1386,6 @@ narrative_event = {
 			set_creation_date = 1.1.1
 		}
 		clr_character_flag = excalibur_searching
-		hidden_tooltip = { remove_trait = wounded remove_disease_trait_effect = yes }
 		hidden_tooltip = { narrative_event = { id = loka_excalibur.18 days = 4 } }
 	}
 }
