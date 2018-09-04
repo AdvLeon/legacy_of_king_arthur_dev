@@ -260,9 +260,9 @@ character_event = {
 				character_event = {
 					id = 38280 #Notify Wounded
 				}
-			narrative_event = { id = loka_excalibur.42 days = 10 }
 			}
 		}
+		narrative_event = { id = loka_excalibur.42 days = 10 }
 	}
 }
 
