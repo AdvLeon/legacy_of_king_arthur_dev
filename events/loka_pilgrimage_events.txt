@@ -1,0 +1,28 @@
+#########################################################
+#														#
+#		Legacy of King Arthur - Pilgrimage Events		#
+#														#
+#########################################################
+
+# Written by - AdvLeon #
+
+namespace = loka_pilgrimage
+
+# Packing for the Journey - Diligence #
+character_event = {
+	id = loka_pilgrimage.1
+	desc = loka_pilgrimage.description.1
+	picture = gfx_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = loka_pilgrimage.option.a.1
+	}
+	option - {
+		name = loka_pilgrimage.option.b.1
+	}
+	option - {
+		name = loka_pilgrimage.option.c.1
+	}
+}
