@@ -4,25 +4,63 @@
 #														#
 #########################################################
 
-# Written by - AdvLeon #
+## Written by - AdvLeon ##
 
 namespace = loka_pilgrimage
 
-# Packing for the Journey - Diligence #
+## Packing for the Journey - Diligence ##
 character_event = {
 	id = loka_pilgrimage.1
 	desc = loka_pilgrimage.description.1
-	picture = gfx_evt_stone_church
+	picture = 
 	
 	is_triggered_only = yes
 	
+	## Option 1 - Ascetic - Cheap and holy, Piety and Zealous trait ##
 	option = {
 		name = loka_pilgrimage.option.a.1
+		wealth = -10
+		piety = 800
+		church_opinion = 20
+		if = {
+			limit = { NOT = { trait = zealous } }
+			add_trait = zealous
+		}
 	}
+	## Option 2 - Diligent - Costly, Diligent trait ##
 	option - {
 		name = loka_pilgrimage.option.b.1
+		wealth = -250
+		if = {
+			limit = { NOT = { trait = diligent } }
+			random = {
+				chance = 70
+				add_trait = diligent
+				hidden_tooltip = {
+					character_event = { id = 38256 } # Notify Diligent
+				}
+			}
+		}
 	}
+	## Option 3 - Lazy - Expensive, safe, Sloth trait, Prestige, combat skill ##
 	option - {
 		name = loka_pilgrimage.option.c.1
+		wealth = -500
+		prestige = 1500
+		feudal_opinion = 20
+		city_opinion = 10
+		if = {
+			limit = {NOT = { trait = slothful } }
+			random = {
+				chance = 75
+				add_trait = slothful
+				hidden_tooltip = {
+					character_event = { id = 38251 } # Notify Slothful
+				}
+			}
+		}
 	}
 }
+
+##  
+	
