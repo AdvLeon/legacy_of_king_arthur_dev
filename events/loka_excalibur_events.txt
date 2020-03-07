@@ -1365,7 +1365,7 @@ narrative_event = {
 	option = {
 		trigger = { NOT = { check_variable = { which = lady_score value = 4 } } }
 		name = loka_excalibur.option.b.16
-		hidden_tooltip = { narrative_event = { id = loka_excalibur.18 days = 5 } }
+		hidden_tooltip = { narrative_event = { id = loka_excalibur.19 days = 5 } }
 	}
 }
 
